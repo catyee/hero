@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit{
     heroes: Hero[] = [];
     constructor(private heroesService:HeroService){}
     ngOnInit():void{
-      this.heroesService.getHeroes()
-        .then(heroes => (this.heroes = heroes.slice(1.5)));
+      // this.heroesService.getHeroes()
+      //   .then(heroes => (this.heroes = heroes.slice(1.5)));
     }
 }
