@@ -2,6 +2,7 @@ package com.dianwutong;
 
 public class Post {
      private  static  int count = 0;
+     private long id;
      static {
        count = 100;
      }
@@ -24,6 +25,9 @@ public class Post {
       String formatString = "我的名字是%s,我今年%d岁,我的爱好是%s";
       String output = String.format(formatString,name,age,hobby);
 
+      public long getId(){
+          return id;
+      }
     //成员方法
     void print(){
         System.out.println(output);
