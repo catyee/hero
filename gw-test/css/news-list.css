@@ -1,0 +1,129 @@
+.container{
+    height: auto;
+}
+img{
+    border: none;
+    outline: none;
+}
+.news-hover:hover{
+    background: #f9f9f9;
+}
+.hot-hover:hover{
+    color: #e9be2b;
+}
+.active-news{
+    width: 850px;
+    display: inline-block;
+    padding-right: 50px;
+}
+.active-news-item{
+    padding: 0 26px 20px 12px;
+    /*padding-bottom: 20px;*/
+    border-bottom: 1px solid #d9d9d9;
+}
+.hot-news{
+    width: 300px;
+    display: inline-block;
+    background: #f9f9f9;
+    padding-bottom: 20px;
+}
+.left-header{
+    border-bottom: 1px solid #d9d9d9;
+}
+.active-news-header{
+    border-left: 6px solid #e9be2b;
+    padding-left: 25px;
+}
+.active-news-list{
+    /*padding: 0 26px 0 12px;*/
+}
+.active-news-con{
+    line-height: 23px;
+    color: #737373;
+}
+
+.active-news-date,.active-news-source{
+    color: #737373;
+}
+.active-news-source{
+    margin-left: 10px;
+}
+.inline-block-row-news{
+    font-size: 0px;
+    width: 100%;
+}
+
+.inline-block-row-news>*{
+    display: inline-block;
+    vertical-align: top;
+}
+.active-news-text{
+
+}
+.title:hover{
+    text-decoration: underline;
+}
+.width590{
+    width: 590px;
+}
+.active-news-pic img{
+    margin-right: 22px;
+}
+.hot-news-header{
+    height: 30px;
+}
+.hot-news-header span{
+    height: 100%;
+    width: 6px;
+    background: #e9be2b;
+    margin-right: 23px;
+}
+.hot-news-con{
+    margin: 0 29px;
+    border-top: 1px solid #d9d9d9;
+}
+.hot-news-item-title{
+    line-height: 26px;
+}
+.hot-news-item{
+    border-bottom: 1px solid #d9d9d9;
+}
+.page li{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    margin-right: 11px;
+    font-size: 14px;
+    color: black;
+}
+.page li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 14px;
+}
+.page li.active{
+    background: #e9be2b;
+    color: white;
+}
+.page li.active a{
+    color: white;
+}
+.page li.disabled{
+    background: #ededed;
+    cursor: not-allowed;
+}
+.titile-index{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #bbbbbb;
+    color: #ffffff;
+    vertical-align: middle;
+    margin-right: 3px;
+}

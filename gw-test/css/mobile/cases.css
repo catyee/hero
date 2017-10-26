@@ -1,0 +1,92 @@
+.banner-background {
+    width: 100%;
+}
+
+.case-icons {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0 0 0;
+}
+
+.icon-class {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-class img {
+    width: 50%;
+}
+
+.icon-class span {
+    font-size: 0.7rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.title {
+    height: 3rem;
+    margin: 1.4rem 0rem 1.4rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title span {
+    height: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    margin: 0 0 0 0.82rem;
+}
+
+.bar {
+    margin: 0 0 0 0.9rem;
+    height: 1.5rem;
+    width: 0.25rem;
+}
+
+.case-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cases-show {
+    padding: 0 0.9rem;
+}
+
+.case-title {
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.case-content {
+    font-size: 0.7rem;
+}
+
+.case-img {
+    width: 80%;
+}
+
+.case-landscape {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+    padding: 0 0.9rem;
+    box-sizing: border-box;
+}
+
+.case-landscape-img {
+    height: 15.4rem;
+    margin: 0 0.25rem 0 0;
+}
+
+.swiper-pagination-above {
+    bottom: 3rem;
+}
+
+.case-img-large {
+    width: 100%;
+}

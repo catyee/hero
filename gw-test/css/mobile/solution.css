@@ -1,0 +1,36 @@
+body{
+    background: #f3f3f3;
+}
+.padding1{
+    padding:1rem;
+}
+
+.title{
+    border-left: 0.4rem solid #e9be2b;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.416rem;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 58.7vw;
+}
+
+.solution{
+    width: 100%;
+    height: 58.6vw;
+    padding: 0.83rem 2rem;
+    box-sizing: border-box;
+}
+
+.edp-solution{
+    background: url("../../images/mobile/edp-bg.png");
+    background-size: 100% 100%;
+}
+
+.ems-solution{
+    background: url("../../images/mobile/ems-bg.png");
+    background-size: 100% 100%;
+}

@@ -1,0 +1,51 @@
+.container {
+    margin: 0 0.9rem;
+}
+
+.header {
+    margin: 1.455rem 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.header span {
+    font-size: 1.2rem;
+}
+
+.page-title {
+    font-size: 1.25rem;
+}
+
+.gray-line {
+    background: #e6e6e8;
+    height: 0.3333rem;
+    width: 100%;
+}
+
+.case-img {
+    width: 100%;
+}
+
+.case-title {
+    display: flex;
+    align-items: center;
+    margin: 1.455rem 0;
+    width: 100%;
+}
+
+.case-title span {
+    font-size: 1.1rem;
+}
+
+.case-content {
+    margin: 1rem 0 0 0;
+}
+
+.case-content span {
+    font-size: 0.8rem;
+}
+
+.line {
+    height: 1rem;
+    width: 100%;
+}

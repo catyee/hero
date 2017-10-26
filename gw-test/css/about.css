@@ -1,0 +1,96 @@
+/*banner*/
+
+.about-banner .container{
+    position: relative;
+}
+
+.about-banner{
+    width: 100%;
+    height: 550px;
+    background-image: url("../images/about-banner-bg.jpg");
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    min-width: 1200px;
+}
+
+.banner-inner{
+    max-width: 1400px;
+    min-width: 1200px;
+    margin: auto;
+    height: inherit;
+    background-image: url("../images/about-banner-inner-bg.jpg");
+    background-size:cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-content{
+    font-size: 16px;
+    line-height: 30px;
+    color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.banner-content>div{
+    width: 1200px;
+    margin: auto;
+    text-align: justify;
+    text-justify: inter-ideograph;/*IE*/
+}
+
+.culture-content{
+    text-align: center;
+    line-height: 25px;
+    color: #5c5c5c;
+}
+.culture-pic{
+    transform: scale(0.9);
+}
+.culture-content>span{
+    display: block;
+}
+
+.culture{
+    background: url("/images/about-culture-bg.png") no-repeat;
+    background-size:100% auto;
+    background-position: 0 100%;
+    min-width: 1200px;
+}
+
+.service-con{
+    font-size: 0px;
+}
+
+.service-con>div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.service-con>div:nth-child(1){
+    width: 648px;
+    height:390px;
+}
+
+.service-con>div:nth-child(2){
+    width: 552px;
+    height:390px;
+    font-size: 14px;
+}
+
+.service-con .service-item{
+    padding: 20px;
+    text-align: left;
+    line-height: 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.service-con .service-item.active{
+    background: #f2f2f2;
+}

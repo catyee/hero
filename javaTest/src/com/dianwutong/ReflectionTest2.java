@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 
 public class ReflectionTest2 {
   public static void main(String[] args) throws Exception {
-    Class<?> class1 = Class.forName("com.dianwutong.user");
+    Class<?> class1 = Class.forName("com.dianwutong.User");
     //第一种方法，调用Class的newInstance()方法，这会调用类的默认构造方法
     User user = (User) class1.newInstance();
     user.setAge(20);
@@ -17,7 +17,10 @@ public class ReflectionTest2 {
       Class<?> clazzs[] = cons[i].getParameterTypes();
       //打印构造函数的签名
       System.out.print("cons["+i+"](");
-      
+      for(int j = 0;j < clazzs.length;j++){
+       // if ( j == clazzs.length-1)
+
+      }
 
     }
   }

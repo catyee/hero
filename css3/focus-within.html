@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .form-group *:focus{
+        background: yellow;
+        /*color: #000;*/
+      }
+      .form-group{
+        padding: 10px;
+        border: 3px solid transparent;
+      }
+      .form-group:focus-within{
+        border-color: red;
+      }
+      input{
+        /*caret-color: blue;*/
+        color: red;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
+    </style>
+</head>
+<body>
+    <div class="form-group">
+      <label for="email">
+        your email:
+      </label>
+      <input type="email" name="email" id="email" placeholder="Enter your email address">
+    </div>
+</body>
+</html>
