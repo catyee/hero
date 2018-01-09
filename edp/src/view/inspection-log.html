@@ -1,0 +1,108 @@
+
+
+<header class="header" id="header">
+
+    <div class="row">
+
+        <div class="title">
+            <span>日志查询</span>
+            <span><i class="iconfont">&#xe605;</i></span>
+            <span><a href="javascript:history.back()">巡检日志</a></span>
+            <span><i class="iconfont">&#xe605;</i></span>
+            <span>详情</span>
+        </div>
+
+    </div>
+
+</header>
+
+<div class="header-placeholder"></div>
+
+<div class="content">
+    <div class="log">
+
+        <div class="center">
+             <img src="//cdn.dianwutong.com/edp/img/yellow_pin.png" class="pin">
+        </div>
+
+        <div class="height40"></div>
+
+        <div class="font14 center" id="title"></div>
+        <div class="font12 center" id="date"></div>
+
+        <div class="row">
+            <div class="col-70">
+                <div class="height30"></div>
+                <table class="base-info" cellspacing="10">
+                    <tr>
+                        <td>配电室：</td><td id="power-room-name"></td>
+                    </tr>
+                    <tr>
+                        <td>巡检日期：</td><td id="inspection-date"></td>
+                    </tr>
+                    <tr>
+                        <td>完成时间：</td><td id="complete-time"></td>
+                    </tr>
+                    <tr>
+                        <td>巡检人：</td><td id="inspector"></td>
+                    </tr>
+                    <tr>
+                        <td>日检项目：</td><td id="daily-count"></td>
+                    </tr>
+                    <tr>
+                        <td>周检项目：</td><td id="week-count"></td>
+                    </tr>
+                    <tr>
+                        <td>月检项目：</td><td id="month-count"></td>
+                    </tr>
+                    <tr>
+                        <td>复检项目：</td><td id="review-count"></td>
+                    </tr>
+                    <tr>
+                        <td>突发项目：</td><td id="burst-count"></td>
+                    </tr>
+                    <tr>
+                        <td>异常项目：</td><td id="bug-count"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-30">
+
+                <div class="height40"></div>
+
+                <div class="stamp">
+                    <div class="height30"></div>
+                    <svg width="100%" height="100%" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg">
+
+                        <circle cx="55" cy="55" r="50" stroke="#999999"
+                                stroke-width="2" fill="white"/>
+                        <circle cx="55" cy="55" r="45" stroke="#999999"
+                                stroke-width="1" fill="white"/>
+
+                        <path  id="path1" d="M 27.287 71 A32 32 0 1 1 82.713 71" stroke="none"  fill="none" />
+                        <text style="font-size:10px;">
+                            <textPath xlink:href="#path1" color="#999999" stroke-width="1">北京电务能源通股份有限公司</textPath>
+                        </text>
+
+                        <image x="35" y="35" width="40" height="40"
+                               xlink:href="//cdn.dianwutong.com/common/img/bee.png" />
+                    </svg>
+                </div>
+
+            </div>
+        </div><!--基本信息-->
+
+        <div class="height30"></div>
+        <div class="line"></div>
+        <div class="height30"></div>
+        <div class="">
+            <table id="content" class="ui-table table-bordered">
+
+            </table>
+            <div class="text-align-c color-gray-a">北京电务能源通股份有限公司</div>
+        </div>
+        <div class="height30"></div>
+    </div>
+</div>

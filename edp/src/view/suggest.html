@@ -1,0 +1,63 @@
+<header class="header">
+    <div class="data-type-group">
+        <div class="radio-group">
+            <input type="radio" name="type" value="createSuggest" class="create-suggest" id="create-suggest">
+            <label for="create-suggest">写反馈</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" name="type" value="suggestList" class="suggest-list" checked id="suggest-list">
+            <label for="suggest-list">查询反馈</label>
+        </div>
+    </div>
+</header>
+<div class="header-placeholder"></div>
+<div class="container">
+    <div class="title">
+        <span class="pointer" id="suggests">反馈列表</span>><span class="color-yellow">反馈详情</span>
+    </div>
+    <div class="height20"></div>
+    <div class="detail">
+        <!--反馈详情的icon-->
+            <div class="user-icon" id="suggestIcon">
+
+            </div>
+            <div class="suggest-desc">
+                <div class="title" id="title"></div>
+                <div class="height5"></div>
+                <div class="about-user">
+                    &nbsp;&nbsp;<span class="font14 color-black user" id="user"></span> <span class="font12 time">发布时间:<span id="time"></span></span>
+                    <span class="font12 ">评论：<span>0</span></span>
+                </div>
+                <div class="height30"></div>
+                <div id="content">
+
+                </div>
+                <div id="pic-container" class="pic-container"></div>
+            </div>
+    </div>
+    <div class="height5"></div>
+    <div class="comments">
+        <div class="comments-list" id="comments-list">
+
+        </div>
+        <div class="height50"></div>
+        <div class="comments-input" id="comments-input">
+            <!--当前登录的客户默认可以提交评论-->
+                <div class="user-icon" id="userIcon">
+
+
+                </div>
+                <div class="input-area">
+                    <div class="user-name" id="userName"></div>
+                    <textarea placeholder="写下你的评论" class="comments-content input-border" id="comment"></textarea>
+                    <div class="tip color-danger" id="comment-tip" style="display: none">请填写评论内容</div>
+                    <div class="save pointer">
+                        <div>发表评论</div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+
+</div>

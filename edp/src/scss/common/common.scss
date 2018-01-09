@@ -1,0 +1,190 @@
+
+@import "colors";
+@import "mixins";
+//@import "animations";
+
+$dateRange_height: 30px;
+
+//覆盖浏览器默认样式
+*{
+  margin:0;
+  padding:0;
+  font-family:"微软雅黑";
+}
+
+@keyframes bodyFadeIn{
+    from{ opacity: 0}
+    to{opacity: 1}
+}
+
+body{
+  background: #fbfbfb;
+  min-width: 1157px;
+ animation: bodyFadeIn 0.1s linear 0.2s forwards;
+}
+
+input::-ms-clear{display:none;}  /*删除ie浏览器的'删除'*/
+input::-ms-reveal{display:none;} /*删除ie浏览器的'查看密码'*/
+
+//颜色
+.color-danger { color: $danger_color }
+.color-warning { color: $warning_color }
+.color-success { color: $success_color }
+
+
+//栅格布局系统
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+@for $i from 1 through 100 {
+  .col-#{$i} {
+    width :  $i + %;
+  }
+}
+
+@for $i from 1 through 100 {
+  .width#{$i} {
+
+    width : $i + %;
+  }
+}
+
+.table-cell{
+  //display: table-cell;
+  //vertical-align: top;
+  //white-space: nowrap;
+}
+
+
+//基本样式
+
+//边距
+.no-padding{ padding: 0px; }
+
+//overflow
+
+.hidden{ overflow: hidden }
+.auto{ overflow: auto }
+.scroll{ overflow: scroll }
+
+//字体颜色
+
+.color-primary{ color : $primary_color; }
+.color-danger{ color : $danger_color; }
+
+//背景颜色
+
+.bg-grey{ background: $grey_color; };
+
+//高
+
+@for $i from 1 through 100 {
+
+  .height#{$i} {
+
+    width : 100%;
+    clear : both;
+    height: $i+px;
+
+  }
+}
+
+//字体大小
+
+@for $i from 8 through 30 {
+  .font#{$i}{ font-size: $i+px; }
+}
+
+//对其方式
+
+.right{ text-align: right; }
+.left{ text-align: left; }
+.center{ text-align: center; }
+
+//隐藏
+
+.none{ display: none; }
+
+//光标样式
+
+.pointer{ cursor: pointer }
+
+
+/*** 通用样式 ***/
+header{
+  height:4rem;
+  width:100%;
+  box-shadow:0 2px 5px #d9d9d9;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 99;
+  background: $white_color;
+  box-sizing: border-box;
+
+  .title {
+
+    line-height: 30px;
+    font-size: 18px;
+
+    a{
+      text-decoration: none;
+      color: $primary_color;
+    }
+
+  }
+
+}
+
+.header-placeholder{
+  width: 100%;
+  height: 6rem;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 0 40px;
+
+}
+
+
+//日期选择器样式
+input.date-range{
+  width: 100%;
+  padding:0px 1%;
+  display: inline-block;
+  height: $dateRange_height;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid #b2b2b2;
+  outline: none;
+  font-size: 14px;
+  vertical-align: top;
+  line-height: $dateRange_height;
+  box-sizing: border-box;
+  text-align: center;
+
+  &.md {
+    width:232px;
+  }
+
+  &.sm {
+    width: 132px;
+  }
+  &.hd {
+    width: 300px;
+  }
+}
+//防止换行溢出
+
+.noSpill{
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,61 @@
+@import "common/common";
+@import "./common/common";
+
+.header{
+
+  width: 1200px;
+  font-size: 0px;
+  margin: auto;
+  padding:1rem 0;
+
+  img{
+    vertical-align: bottom;
+    width: 80px;
+  }
+
+  .greet{
+    font-size: 18px;
+    display: inline-block;
+    text-align: left;
+    padding: 0 0 0px 10px;
+
+  }
+
+
+}
+
+.main{
+
+
+  .content {
+
+    width: 1200px;
+    margin: auto;
+
+    video{
+
+      margin: 10px auto;
+      background: black;
+
+    }
+
+  }
+
+
+
+
+}
+
+.footer{
+
+  padding:2rem;
+  font-size: 12px;
+  width: 1200px;
+  margin: auto;
+
+  span:nth-child(1){
+    padding-right: 20px;
+  }
+
+}
+

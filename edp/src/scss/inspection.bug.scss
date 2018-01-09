@@ -1,0 +1,33 @@
+
+@import "./common/common";
+
+.content{
+
+  width:1000px;
+  background: $white_color;
+  padding:30px;
+  margin: auto;
+  min-height: 800px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba( black, 0.15);
+
+  .gallery-pic{
+
+    width:24%;
+    display: inline-block;
+    margin-top:10px;
+
+    &:not(:nth-child(4n+1)){
+
+      margin-left:1.333%;
+
+    }
+
+    img{
+
+      width: 100%;
+    }
+
+  }
+
+}

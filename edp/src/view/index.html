@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="//cdn.dianwutong.com/common/css/iconfont.css" />
+</head>
+
+<body>
+    <div>
+        <header class="header">
+            <div class="row">
+
+                <div class="title">首页</div>
+
+                <div class="width3"></div>
+
+                <div class="title font18">
+
+                    配电室总量：<span id="prCount" class="color-danger"></span>个
+
+                </div>
+
+            </div>
+
+        </header>
+        <div style="height:6rem;background:#fbfbfb;z-index: 3;position: fixed;width: 100% "></div>
+        <div style="height:6rem;" class="space-height"></div>
+
+        <div class="pr-detail">
+            <div class="container">
+                <div class="alarming-con">
+
+                    <div class="desc">
+                        <div class="pr">
+                            <img src="//cdn.dianwutong.com/edp/img/powerRoom.png">
+                        </div>
+                        <div class="color-white"><span>&nbsp;安全运行&nbsp;<span id="days" class="color-green font16 days" ></span>&nbsp;天</span>&nbsp;&nbsp;
+                            <span
+                                id="alarm-status"></span>
+                        </div>
+                        <div class="pr-name color-white " id="pr-name"></div>
+                    </div>
+                    <img class="alarming-bg bg" src="//cdn.dianwutong.com/edp/img/alarming-bg.png">
+
+                </div>
+                <div class="energy-con">
+                    <div>
+
+                        <div class="desc">
+                            <div class="pr">
+                                <img src="//cdn.dianwutong.com/edp/img/day-energy.png">
+                            </div>
+                            <div class="color-white " id="currentEle"></div>
+                            <div class="color-white ">当日用电量</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="desc">
+                            <div class="pr">
+                                <img src="//cdn.dianwutong.com/edp/img/month-energy.png">
+                            </div>
+                            <div class="color-white " id="monthEle"></div>
+                            <div class="pr-name color-white ">当月用电量</div>
+                        </div>
+                    </div>
+                    <div>
+
+                        <div class="desc">
+                            <div class="pr">
+                                <img src="//cdn.dianwutong.com/edp/img/total-energy.png">
+                            </div>
+                            <div class="color-white " id="totalEle"></div>
+                            <div class="pr-name color-white ">总用电量</div>
+                        </div>
+                    </div>
+                    <img class=" bg" src="//cdn.dianwutong.com/edp/img/energy-bg.png">
+                </div>
+                <div class="alarm-con">
+                    <div>
+                        <div class="desc">
+                            <div class="pr">
+                                <img src="//cdn.dianwutong.com/edp/img/month-alarm.png">
+                            </div>
+                            <div class="color-white " id="monthAlarm"></div>
+                            <div class="color-white ">当月报警总量</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="desc">
+                            <div class="pr">
+                                <img src="//cdn.dianwutong.com/edp/img/history-alarm.png">
+                            </div>
+                            <div class="color-white " id="historyAlarm"></div>
+                            <div class=" color-white ">历史报警总量</div>
+                        </div>
+                    </div>
+                    <img class=" bg" src="//cdn.dianwutong.com/edp/img/alarm-bg.png">
+                </div>
+                <div class="operation-con">
+                    <div>
+                        <div class="desc">
+                            <div class="pr">
+                                <img src="//cdn.dianwutong.com/edp/img/inspection.png">
+                            </div>
+                            <div class="color-white " id="inspectionCount"></div>
+                            <div class="color-white ">巡检总数</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="desc">
+                            <div class="pr">
+                                <img src="//cdn.dianwutong.com/edp/img/repair.png">
+                            </div>
+                            <div class="color-white " id="repairCount"></div>
+                            <div class="color-white ">抢修次数</div>
+                        </div>
+                    </div>
+                    <img class=" bg" src="//cdn.dianwutong.com/edp/img/inspection-bg.png">
+                </div>
+            </div>
+        </div>
+        <div class="height-pr-detail"></div>
+
+        <div class="pr-list">
+            <div class="container">
+                <table class="table-head">
+                    <tr>
+                        <td class="col-4" title="序号">序号</td>
+                        <td class="col-11 " title="配电室名称 ">配电室名称</td>
+                        <td class="col-10 pr-status">
+                            配电室状态
+                            <div id="change-status">
+                                <div class="arrow-top top-active"></div>
+                                <div class="arrow-bottom bottom"></div>
+                            </div>
+
+                        </td>
+                        <td class="col-11" title="当日用电量（kWh）">当日用电量（kWh）</td>
+                        <td class="col-11" title="当月用电量（kWh）">当月用电量（kWh）</td>
+                        <td class="col-13" title="总用电量（kWh）">总用电量（kWh）</td>
+                        <td class="col-10" title="当月报警总量（次）">当月报警总量（次）</td>
+                        <td class="col-10" title="历史报警总量（次）">历史报警总量（次）</td>
+                        <td class="col-10" title="巡检次数（次）">巡检次数（次）</td>
+                        <td class="col-10" title="抢修次数（次）">抢修次数（次）</td>
+                    </tr>
+                </table>
+                <div class="static-height"></div>
+                <div id="pr-list-con">
+                    <table id="pr-list">
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="foot-space">
+            <div style="height:3rem"></div>
+            <div class="center">
+                <ul class="pagination" id="pagination"></ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="//cdn.bootcss.com/rxjs/5.2.0/Rx.min.js"></script>
+    <script src="//cdn.dianwutong.com/vendor/jquery.min.js"></script>
+    <script src="//cdn.dianwutong.com/vendor/jquery.cookie.js"></script>
+</body>
+
+</html>

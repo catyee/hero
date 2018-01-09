@@ -1,0 +1,211 @@
+@import "common/common";
+$widthDiv:18%;
+html,body{
+  background: #fbfbfb;
+  -webkit-user-select: none;
+
+}
+@media screen and (max-width: 1366px){
+  html{font-size:13px;}
+}
+
+@media screen and (min-width: 1367px ) and (max-width:1680px){
+  html{font-size:14px;}
+}
+
+@media screen and (min-width:1681px){
+  html{font-size:15px;}
+}
+a{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+.bottom{
+  border-top: 5px solid #666;
+}
+.top{
+  border-bottom: 5px solid #666;
+}
+.bottom-active{
+  border-top: 5px solid red;
+}
+.top-active{
+  border-bottom: 5px solid red;
+}
+
+.bg-hover{
+  background: #f3f3f3;
+}
+.color-white{
+  color: $white_color;
+}
+
+.pr-status{
+  position: relative;
+}
+.arrow-top{
+    position: absolute;
+    top: 14px;
+    left:80%;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.arrow-bottom{
+  position: absolute;
+  top: 21px;
+  left:80%;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+
+.height-pr-detail{
+  height: 270px;
+}
+.pr-detail{
+  min-width: 1200px;
+  position: fixed;
+  height: 270px;
+  width: 100%;
+  background: #fbfbfb;
+  z-index: 3;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    height: 270px;
+    .desc{
+      position: relative;
+      width: 100%;
+      text-align: center;
+      line-height: 24px;
+    }
+    .days{
+      vertical-align: -2px;
+    }
+    .bg{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .pr{
+      position: absolute;
+      left: 0px;
+    }
+  }
+
+  .alarming-con{
+    position: relative;
+    height: 144px;
+    width: $widthDiv;
+    background: linear-gradient(to right,#ffd044,#ffb22b 30%, #ffb22b);
+    background: -webkit-linear-gradient(to right,#ffd044,#ffb22b 30%, #ffb22b);
+    background: -o-linear-gradient(to right,#ffd044,#ffb22b 30%, #ffb22b);
+    background: -moz-linear-gradient(to right,#ffd044,#ffb22b 30%, #ffb22b);
+
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+
+  }
+  .energy-con{
+    position: relative;
+    height: 173px;
+    width: $widthDiv;
+    background: linear-gradient(to right,#ff80a1, #ff2874);
+    background: -webkit-linear-gradient(to right,#ff80a1, #ff2874);
+    background: -o-linear-gradient(to right,#ff80a1, #ff2874);
+    background: -moz-linear-gradient(to right,#ff80a1, #ff2874);
+    padding: 30px 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  .alarm-con{
+    position: relative;
+    height: 173px;
+    width: $widthDiv;
+    background: linear-gradient(to right,#e074ff, #9405e7);
+    background: -webkit-linear-gradient(to right,#e074ff, #9405e7);
+    background: -o-linear-gradient(to right,#e074ff, #9405e7);
+    background: -moz-linear-gradient(to right,#e074ff, #9405e7);
+    padding:30px 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .operation-con{
+    position: relative;
+    height: 173px;
+    width: $widthDiv;
+    background: linear-gradient(to right,#53b8ff, #2883ff);
+    background: -webkit-linear-gradient(to right,#53b8ff, #2883ff);
+    background: -o-linear-gradient(to right,#53b8ff, #2883ff);
+    background: -moz-linear-gradient(to right,#53b8ff, #2883ff);
+    padding:30px 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.pr-list{
+  table{
+    background: white;
+    width: 100%;
+    border-spacing: 0;
+    overflow: hidden;
+    tr{
+      cursor: pointer;
+      &:hover{
+        background: #f3f3f3;
+      }
+    }
+
+    td, th {
+      box-sizing: border-box;
+      border: none;
+      padding:10px 5px ;
+      text-align: center;
+
+    }
+
+}
+
+}
+.pr-list .table-head{
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background: white;
+  box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.15);
+  table-layout:fixed;
+  td {
+    white-space: nowrap;
+    word-wrap: break-word;
+    word-break:keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.foot-space{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px ;
+  background: #fbfbfb;
+}
+.pr-list div{
+  overflow: hidden;
+}
+.color-red{
+  color: $danger_color;
+}
+.color-green{
+  color: $success_color;
+}

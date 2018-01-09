@@ -1,0 +1,42 @@
+<header class="header" id="header">
+
+    <div class="row">
+
+        <div class="title">
+            <span>日志查询</span>
+            <span><i class="iconfont">&#xe605;</i></span>
+            <span>操作票</span>
+        </div>
+
+        <div class="width3"></div>
+
+        <div>
+
+            <input id="date-range" class="date-range md" placeholder="请选择日期区间">
+
+        </div>
+
+        <div class="width2"></div>
+
+        <div class="ui-btn-group ui-btn-group-primary width20" id="status-btn">
+
+            <button class="ui-btn width30 active" >全部</button>
+            <button class="ui-btn width30" value="1">完成</button>
+            <button class="ui-btn width30" value="0">未完成</button>
+
+        </div>
+
+    </div>
+    
+</header>
+<div style="height:6rem"></div>
+
+<div class="container">
+    <div id="ticket-list" class="ticket-list">
+    </div>
+    <div class="center">
+        <nav id="pagination" class="pagination"></nav>
+    </div>
+</div>
+
+<script src="//cdn.dianwutong.com/vendor/laydate/laydate.js"></script>

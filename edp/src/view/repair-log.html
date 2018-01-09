@@ -1,0 +1,121 @@
+<header class="header" id="header">
+
+    <div class="row">
+
+        <div class="title">
+            <span>日志查询</span>
+            <span><i class="iconfont">&#xe605;</i></span>
+            <span><a href="javascript:history.back()">抢修日志</a></span>
+            <span><i class="iconfont">&#xe605;</i></span>
+            <span>详情</span>
+        </div>
+
+    </div>
+
+</header>
+
+<div class="header-placeholder"></div>
+
+<div class="content">
+
+    <div class="log">
+
+        <div class="center">
+
+            <img src="//cdn.dianwutong.com/edp/img/yellow_pin.png" class="pin">
+
+        </div>
+
+        <div class="height40"></div>
+
+        <div class="font14 center" id="title"></div>
+
+        <div class="row">
+
+            <div class="width70">
+
+                <div class="height80"></div>
+
+                <table class="base-info" cellspacing="10">
+                    <tr>
+                        <td>配电室：</td>
+                        <td id="power-room-name"></td>
+                    </tr>
+                    <tr>
+                        <td>报警时间：</td>
+                        <td id="alarm-time"></td>
+                    </tr>
+                    <tr>
+                        <td>报警内容：</td>
+                        <td id="alarm-content"></td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="width30">
+
+                <div class="height40"></div>
+
+                <div class="stamp">
+                    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+                        <circle cx="55" cy="55" r="50" stroke="#999999" stroke-width="2" fill="white" />
+                        <circle cx="55" cy="55" r="45" stroke="#999999" stroke-width="1" fill="white" />
+
+                        <path id="path1" d="M 27.287 71 A32 32 0 1 1 82.713 71" stroke="none" fill="none" />
+                        <text style="font-size:10px;">
+                            <textPath xlink:href="#path1" color="#999999" stroke-width="1">北京电务能源通股份有限公司</textPath>
+                        </text>
+
+                        <image x="35" y="35" width="40" height="40" xlink:href="//cdn.dianwutong.com/common/img/bee.png" />
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+        <!--基本信息-->
+
+        <div class="height30"></div>
+        <div class="line"></div>
+        <div class="height30"></div>
+        <div class="">
+            <div class="repair-proccess-con">
+                <div class="state">
+                    <div class="font10">产生报警</div>
+                    <div class="font10">开始查勘</div>
+                    <div class="font10">开始抢修</div>
+                    <div class="font10">抢修完成</div>
+                </div>
+                <div class="height15"></div>
+                <div class="process" id="repair-proccess">
+
+                </div>
+                <div class="height15"></div>
+                <div class="time font12" id="repair-proccess-time">
+
+                </div>
+            </div>
+
+            <div class="height40"></div>
+
+            <div class="font12">抢修方案</div>
+            <div class="line"></div>
+
+            <div id="repair-programme"></div>
+
+            <div class="height40"></div>
+
+            <div class="font12">抢修结果</div>
+            <div class="line"></div>
+
+
+            <div id="repair-result"></div>
+
+            <div class="height60"></div>
+
+            <div class="center">北京电务能源通股份有限公司</div>
+        </div>
+        <div class="height30"></div>
+    </div>
+</div>

@@ -1,0 +1,120 @@
+
+@import "./common/common";
+
+.log{
+  width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: relative;
+  padding:0px 80px
+}
+.pin{
+  position: absolute;
+  top:-20px;
+}
+
+.stamp{
+  width: 120px;
+  height:120px;
+}
+
+.base-info tr td:nth-child(1){
+  text-align: right;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #dddddd;
+}
+
+.repair-proccess-con{
+  width:100%;
+}
+
+.repair-proccess-con .state{
+  display:flex;
+}
+
+.repair-proccess-con .state div{
+  width:225px;
+  height:12px;
+}
+
+.repair-proccess-con .process{
+  display:flex;
+  align-items:center;
+}
+
+.repair-proccess-con .circle{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background:#e0e0e0;
+  padding:3px;
+  z-index:10;
+
+}
+
+.repair-proccess-con .circle div{
+  width:19px;
+  height:19px;
+  border-radius:50%;
+  background:#fff;
+  font-size:12px;
+  text-align:center;
+  color:#000;
+  line-height:20px;
+}
+
+
+.repair-proccess-con .circle-success{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background:#03b679;
+  padding:3px;
+  box-sizing: border-box;
+  z-index:10;
+
+}
+
+.repair-proccess-con .circle-success div{
+  width:19px;
+  height:19px;
+  border-radius:50%;
+  background:#fff;
+  font-size:12px;
+  text-align:center;
+  color:#02ff32;
+  line-height:20px;
+}
+
+.repair-proccess-con .bar-success{
+  width:210px;
+  height:4px;
+  background:#03b679;
+}
+
+.repair-proccess-con .bar{
+  width:210px;
+  height:10px;
+  background:#e0e0e0;
+}
+
+.repair-proccess-con .time {
+  display:flex;
+  font-size: 12px;
+}
+
+.repair-proccess-con .time div{
+  width:225px;
+}
+.check{
+  color: #03b679;
+  font-size: 12px;
+  &:before{
+    content: "\2713";
+
+  }
+}

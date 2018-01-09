@@ -1,0 +1,60 @@
+
+<header class="header" id="header">
+
+    <div class="row">
+
+        <div class="title">
+            <span>日志查询</span>
+            <span><i class="iconfont">&#xe605;</i></span>
+            <span>工作票</span>
+        </div>
+
+        <div class="width3"></div>
+
+        <div>
+
+            <input id="date-range" class="date-range md" placeholder="请选择日期区间">
+
+        </div>
+
+        <div class="width2"></div>
+
+        <div class="ui-btn-group ui-btn-group-primary width15" id="status-btn">
+
+            <button class="ui-btn width33 active">全部</button>
+            <button class="ui-btn width33" value="1">完成</button>
+            <button class="ui-btn width33" value="0">未完成</button>
+
+        </div>
+
+    </div>
+</header>
+<div style="height:6rem"></div>
+
+<div class="container">
+    <div id="ticket-list" class="ticket-list">
+        <!--<div class="ticket" data-id="'+item.id+'">-->
+            <!--<div class="main">-->
+                <!--<div class="left"></div>-->
+                <!--<div class="right-con">-->
+                    <!--<div class="head">-->
+                        <!--<div class="pr-name">四达配电室</div>-->
+                       <!--<div class="date">2019-09-04 14:02:38</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="footer">-->
+                        <!--<div class="noSpill">YZ00112345678</div>-->
+                        <!--<div class="status bg-green">完成</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="left-circle"><div></div></div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="center">
+        <nav id="pagination" class="pagination"></nav>
+    </div>
+</div>
+
+<script src="//cdn.dianwutong.com/vendor/laydate/laydate.js"></script>
