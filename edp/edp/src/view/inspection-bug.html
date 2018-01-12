@@ -1,0 +1,104 @@
+
+<input type="hidden" id="bug-grade" />
+<input type="hidden" id="power-room-id" />
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 right" style="padding:0;">
+			<div style="background:#e8e8e8;height:48px;line-height:48px;padding:0 20px;">
+				<div class="row">
+					<div class="col-md-2">
+						<span style="font-size:18px;">巡检问题</span>
+					</div>
+					<div class="col-md-8"></div>
+					<div class="col-md-2" style="text-align:right;">
+						<a href="inspection-bug-list.html" style="color:#03b679;">返回巡检问题列表</a>
+					</div>
+				</div>
+			</div>
+			<div style="padding:18px 50px;">
+			<div class="main-container">
+				<div class="base-info">
+					<div class="height35"></div>
+					<div class="row">
+						<div class="col-md-4"></div>
+						<div class="col-md-4 text-align-c font18 bold">巡检问题</div>
+						<div class="col-md-4"></div>
+					</div>
+					<div class="height60"></div>
+					<div class="row info font14">
+						<div class="col-md-6 info-left">
+							<div>配电室名称：<span id="power-room"></span></div>
+							<div>地址：<span id="power-room-address"></span></div>
+							<div>组团长：<span id="inspection-grouper"></span></div>
+							<div>组团长电话：<span id="inspection-grouper-tel"></span></div>
+						</div>
+						<div class="col-md-6 info-right">
+							<div>客户：<span id="customer-name"></span></div>
+							<div>客户电话：<span id="customer-tel"></span></div>
+						</div>
+					</div>
+				</div>
+				<div id="inspection-content">
+					<div class="">
+						<div class="height50"></div>
+						<table class="inspection-table">
+							<tbody>
+								<tr>
+									<td class="bold font14" style="width:200px;">问题描述</td>
+									<td style="text-align:left;">
+										<div id="inspection-bug-desc" class="font14"></div>
+										<div id="inspection-bug-time" class="font14"></div>
+										<div id="inspection-bug-media" style="display:flex;">
+										
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="height80"></div>
+					<div class="row">
+						<div class="col-md-10"></div>
+						<div class="col-md-2">
+							<button class="btn btn-success btn-lg" id="general-repair-order-btn" style="display:none;">生成抢修单</button>
+						</div>
+					</div>
+					<div class="height80"></div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="general-repair-order-modal">
+  <div class="modal-dialog">
+  	<div class="modal-content">
+	 	 <div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  ×
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+          	      系统提示
+            </h4>
+	    </div>
+	   
+	    <div class="modal-body">
+	      <div class="row">
+	      	<div class="height10"></div>
+	      	<div class="col-md-12 text-align-l">问题描述 ( *请在描述中标注调度号 ) </div>
+	      	<div class="col-md-12">
+	      		<textarea class="form-control" rows="5" id="model-inspection-bug-desc"></textarea>
+	      	</div>
+	      	<div class="height20"></div>
+	      	<div class="col-md-12 text-align-r">
+	      		<button class="btn btn-default" data-dismiss="modal">取消</button>
+	      		<button class="btn btn-success" id="model-create-repair-order">确定</button>
+	      	</div>
+		      	<div class="height20"></div>
+	      </div>
+	    </div>
+    </div>
+  </div>
+</div>

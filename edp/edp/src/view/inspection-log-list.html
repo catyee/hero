@@ -1,0 +1,57 @@
+	<div class="container">
+		<div class="row">
+		<div class="col-md-12 search box-shadow">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="select">
+						<select id="inspection-log-customer-select">
+							<option value="-1">请选择客户</option>
+							
+						</select>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="select">
+						<select  id="inspection-log-power-room-select">
+							<option value ="-1">请选择配电室</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-4">
+				<div style="width:310px;">
+					<div class="input-control">
+						<input type="text" placeholder="选择日期" readonly id="inspection-log-date"/>
+						<div class="clear-btn"><i class="iconfont"  id="clear-inspection-select-date">&#xe60a</i></div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<div class="height8"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 main">
+				<div>
+					<div class="shu"></div>
+					<div style="display:flex;justify-content:space-between;border-bottom:1px solid #bed5c3;">
+						<div class="q">巡检日志</div>
+						<div style="line-height:40px;">共搜索到&nbsp<span class="color-green" id="result-count">0</span>&nbsp日志</div>
+					</div>
+					<div style="font-size:24px;min-height:600px" id="inspection-logs-con">
+						
+					</div>
+				</div>
+				<div class="height50"></div>
+				<nav class="text-align-c" >
+                   	<ul class="pagination pagination-md"  id="pagination" page="1">
+                      
+                    </ul>
+               	 </nav>
+			</div>
+		</div>
+		
+	</div>

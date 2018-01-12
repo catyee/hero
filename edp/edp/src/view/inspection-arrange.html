@@ -1,0 +1,158 @@
+<div class="container" style="min-height:800px;">
+	<div class="row">
+		<div class="col-md-12 main" style="padding:0;">
+			<div style="background:#e8e8e8;height:48px;line-height:48px;padding:0 20px;">
+				<div class="row">
+					<div class="col-md-2">
+						<span style="font-size:18px;">巡检安排</span>
+					</div>
+					<div class="col-md-8"></div>
+					<div class="col-md-2" style="text-align:right;">
+						<a href="inspection-arrange-list.html" style="color:#03b679;">返回巡检安排列表</a>
+					</div>
+				</div>
+			</div>
+			<div style="padding:13px 20px;">
+
+				<div class="q">
+					<div class="font18"><span id="current-date"></span>
+						<i class="iconfont font16 pointer" id="selected-date-btn"  data-date-end-date="7d">&#xe60b;</i>
+					</div>
+					<div class="font18">
+						<button class="btn btn-xs btn-success" style="display:none;" id="set-inspection-arrange">
+							<i class="iconfont font18">&#xe837;</i>&nbsp;&nbsp;保&nbsp;&nbsp;存&nbsp;&nbsp;</button>
+						
+					</div>
+				</div>
+
+				<div class="height20"></div>
+
+				<div class="row hide" id="menu-bar">
+					<div class="col-md-8" style="padding-left:30px;">
+						<span class='tg-list-item'>
+							<input class='tgl tgl-ios' id='expand-group' type='checkbox'>
+							<label class='tgl-btn' for='expand-group'></label>
+						</span>
+						<span style="vertical-align: top" class="color-gray-c">展开分组</span>
+					</div>
+					<div class="col-md-4" style="padding:0px">
+						<div class="power-room-list-title">我的配电室</div>
+					</div>
+				</div>
+				<div class="row bg-color-gray-e">
+
+
+					<div id="groupContainer" class="col-md-8">
+					</div>
+					<div id="power-room-list-con" class="col-md-4">
+						<div id="power-room-list" class="width100">
+
+						</div>
+					</div>
+				</div>
+				<div class="height50"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 选择上班时间的面板 -->
+<div id="select-start-work-time-panel">
+	<div class="color-green">设置开始上班时间</div>
+	<div class="height5"></div>
+	<div>
+		<button class="btn btn-sm btn-default">00:00</button>
+		<button class="btn btn-sm btn-default">00:30</button>
+		<button class="btn btn-sm btn-default">01:00</button>
+		<button class="btn btn-sm btn-default">01:30</button>
+		<button class="btn btn-sm btn-default">02:00</button>
+		<button class="btn btn-sm btn-default">02:30</button>
+		<button class="btn btn-sm btn-default">03:00</button>
+		<button class="btn btn-sm btn-default">03:30</button>
+		<button class="btn btn-sm btn-default">04:00</button>
+		<button class="btn btn-sm btn-default">04:30</button>
+		<button class="btn btn-sm btn-default">05:00</button>
+		<button class="btn btn-sm btn-default">05:30</button>
+		<button class="btn btn-sm btn-default">06:00</button>
+		<button class="btn btn-sm btn-default">06:30</button>
+		<button class="btn btn-sm btn-default">07:00</button>
+		<button class="btn btn-sm btn-default">07:30</button>
+		<button class="btn btn-sm btn-default">08:00</button>
+		<button class="btn btn-sm btn-default">08:30</button>
+		<button class="btn btn-sm btn-default">09:00</button>
+		<button class="btn btn-sm btn-default">09:30</button>
+		<button class="btn btn-sm btn-default">10:00</button>
+		<button class="btn btn-sm btn-default">10:30</button>
+		<button class="btn btn-sm btn-default">11:00</button>
+		<button class="btn btn-sm btn-default">11:30</button>
+		<button class="btn btn-sm btn-default">12:00</button>
+		<button class="btn btn-sm btn-default">12:30</button>
+		<button class="btn btn-sm btn-default">13:00</button>
+		<button class="btn btn-sm btn-default">13:30</button>
+		<button class="btn btn-sm btn-default">14:00</button>
+		<button class="btn btn-sm btn-default">14:30</button>
+		<button class="btn btn-sm btn-default">15:00</button>
+		<button class="btn btn-sm btn-default">15:30</button>
+		<button class="btn btn-sm btn-default">16:00</button>
+		<button class="btn btn-sm btn-default">16:30</button>
+		<button class="btn btn-sm btn-default">17:00</button>
+		<button class="btn btn-sm btn-default">17:30</button>
+		<button class="btn btn-sm btn-default">18:00</button>
+		<button class="btn btn-sm btn-default">18:30</button>
+		<button class="btn btn-sm btn-default">19:00</button>
+		<button class="btn btn-sm btn-default">19:30</button>
+		<button class="btn btn-sm btn-default">20:00</button>
+		<button class="btn btn-sm btn-default">20:30</button>
+		<button class="btn btn-sm btn-default">21:00</button>
+		<button class="btn btn-sm btn-default">21:30</button>
+		<button class="btn btn-sm btn-default">22:00</button>
+		<button class="btn btn-sm btn-default">22:30</button>
+		<button class="btn btn-sm btn-default">23:00</button>
+		<button class="btn btn-sm btn-default">23:30</button>
+	</div>
+</div>
+
+<!-- 保存前面 -->
+<div class="modal fade" tabindex="-1" id="pre-save-tips-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					系统提示
+				</h4>
+			</div>
+			<input type="hidden" id="ignore-emergency-id" value="" />
+			<div class="modal-body">
+				保存后无法更改，是否保存？
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">关闭</span>
+				<span class="btn btn-success" data-dismiss="modal" id="modal-save-arrange">确定</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 提示保存成功 -->
+<div class="modal fade" tabindex="-1" id="success-tips-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					系统提示
+				</h4>
+			</div>
+			<input type="hidden" id="ignore-emergency-id" value="" />
+			<div class="modal-body">
+				保存成功
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">关闭</span>
+			</div>
+		</div>
+	</div>
+</div>

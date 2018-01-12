@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 search box-shadow">
+            <div class="search-flew">
+                <div class="search1div">
+                    <select class="search2" id="power-room-select">
+                        <option value="-1">请选择配电室</option>
+                    </select>
+                </div>
+                <div class="search2div">
+                    <select class="search2" id="position-select">
+                        <option value="-1">请选择位置</option>
+                    </select>
+                </div>
+                <div style="width:268px;height:40px;margin-top:25px;">
+                    <div class="btn-group" id="">
+                        <a class="btn btn-success btn-default sign-status" status="-1">全部</a>
+                        <a class="btn  btn-default sign-status" status="1">已挂牌</a>
+                        <a class="btn  btn-default sign-status" status="0">未挂牌</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="height6"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 right">
+            <div class="height20"></div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>调度号</th>
+                        <th>回路用途</th>
+                        <th>挂牌类型</th>
+                        <th width="15%">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="ddns-list">
+
+                </tbody>
+            </table>
+
+            <nav class="text-align-c">
+                <ul class="pagination pagination-md" id="pagination" page="1">
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- 挂牌提示-->
+<div class="modal fade" tabindex="-1" id="sign-confirm-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    系统提示
+                </h4>
+
+            </div>
+            <div class="modal-body">
+                你将要为
+                <span id="modal-sign-ddn" class="color-red"></span>执行
+                <span id="modal-sign-name" class="color-red"></span>操作，改操作将导致系统忽略掉该回路下所有报警，是否继续？
+            </div>
+            <div class="modal-footer">
+                <span class="btn btn-default" data-dismiss="modal">取消</span>
+                <span class="btn btn-success" id="confirm-sign">继续</span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 取消挂牌提示-->
+<div class="modal fade" tabindex="-1" id="cancel-sign-confirm-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title">
+                    系统提示
+                </h4>
+
+            </div>
+            <div class="modal-body">
+                你将要为
+                <span id="cancel-modal-sign-ddn" class="color-red"></span>执行
+                <span class="color-red">取消挂牌</span>操作，改操作将导致系统忽略掉该回路下所有报警，是否继续？
+            </div>
+            <div class="modal-footer">
+                <span class="btn btn-success" id="cancel-confirm-sign">取消挂牌</span>
+            </div>
+        </div>
+    </div>
+</div>

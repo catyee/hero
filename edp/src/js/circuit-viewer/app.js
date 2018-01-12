@@ -1,1 +1,0 @@
-require('../../scss/circuit-viewer.scss');

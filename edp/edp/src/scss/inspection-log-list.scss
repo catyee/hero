@@ -1,0 +1,94 @@
+
+@CHARSET "UTF-8";
+
+@import "./common/common";
+
+#inspection-logs-con a:link{
+	color:#03b679
+}
+#inspection-logs-con a:hover{
+	color:#03b679
+}
+#inspection-logs-con a:active{
+	color:#03b679
+}
+#inspection-logs-con a:visited{color:#03b679}
+
+.header-nav .inspection-log-list{border-bottom:3px solid #03b679;}
+.header-nav .inspection-log-list a{color:#03b679;opacity: 1;font-weight:bold;}
+
+
+/* 选择列表  */
+.search{width:1200px;height:95px;border:1px solid #bed5c3;background:#f3f3f3;border-radius:4px;padding:25px;}
+.select{width:310px;height:40px;border:#bed5c3 solid 1px;border-radius:8px;overflow:hidden;box-shadow: 0px 1px 1px rgba(0,0,0,0.15);margin:0 auto;background:white;}
+.select select{
+	width:327px;height:38px;border:none;outline:none;background-image:url(//cdn.dianwutong.com/ems/home/img/sou.png);background-repeat:no-repeat;background-position:266px 7px;padding-left:12px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.15) inset;
+}
+
+.search input{
+	width:280px;height:38px;border:none;outline:none;padding-left:12px;
+}
+.search img{
+	cursor:pointer;
+}
+
+/*巡检日志*/
+.main{width:1200px;min-height:600px;background:#f3f3f3;border:1px solid #c1d7c5;border-radius:4px;padding:13px 20px;}
+
+.log{width:100%; height:180px;display:flex;}
+.log .left{width:40%;height:100%;}
+.log .left .top{width:100%;height:40%;}
+.log .left .content{width:100%;height:60%;padding-left:190px;}
+.log .middle{width:10%;;height:100%}
+.log .middle .top{width:100%;height:50%;}
+.log .middle .bottom{width:100%;height:50%;border-top:1px dashed #d0d0d0;}
+.log .middle .bottom .circle{
+	width:16px;
+	height:16px;
+	border-radius:50%;
+	position:relative;
+	top:-8px;
+	left:-8px;
+	border:1px solid #bababa;
+	-webkit-box-shadow:0 0 5px #dfdfdf;
+	-moz-box-shadow:0 0 5px #dfdfdf;
+	box-shadow:0 0 5px #dfdfdf;
+	background: #ffffff;
+}
+.log>.right{width:495px;height:120px;border:1px solid #d0d0d0;border-radius:4px;margin-top:25px;padding:8px 30px;background:white;}
+.log>.right .content{width:495px;height:120px;border:1px solid #d0d0d0;border-radius:4px;margin-top:25px;padding:8px 30px;background:white;}
+
+.log:hover .right{border-color:#03B679;}
+.log:hover .middle .bottom .circle{background: #03B679; border-color:#03B679;}
+
+.log:not(:first-child) .middle .top{border-left:1px dashed #d0d0d0;}
+.log:not(:last-child) .middle .bottom{border-left:1px dashed #d0d0d0;}
+
+.one{width:100%; height:140px;display:flex;margin-top:60px;}
+.two{width:100%; height:140px;display:flex;}
+.one-1{width:40%;;height:100%}
+.one-1-1{width:100%;height:40%;}
+.one-1-2{width:100%;height:60%;padding-left:190px;}
+.one-2{width:10%;;height:100%}
+.one-2-1{width:100%;height:50%}
+.one-2-1-1{width:100%;height:50%;border-left:1px dashed #d0d0d0;}
+.one-2-1-2{width:100%;height:50%;border-left:1px dashed #d0d0d0;border-bottom:1px dashed #d0d0d0;}
+.one-2-1-3{width:100%;height:50%;border-bottom:1px dashed #d0d0d0;}
+.one-2-2{width:100%;height:50%;border-top:1px dashed #d0d0d0;border-left:1px dashed #d0d0d0;}
+.one-2-2-1{width:100%;height:50%;}
+.one-0{width:16px;height:16px;border-radius:50%;background:white;position:relative;top:-8px;left:-8px;border:1px solid #bababa;-webkit-box-shadow:0 0 5px #dfdfdf;  
+  -moz-box-shadow:0 0 5px #dfdfdf;  
+  box-shadow:0 0 5px #dfdfdf;}
+.one-00{width:16px;height:16px;border-radius:50%;background:#03b679;position:relative;top:-8px;left:-8px;border:1px solid #bababa;}
+.one-3{width:50%;;height:100%}
+.one-3-1{width:495px;height:120px;border:1px solid #d0d0d0;border-radius:4px;margin-top:10px;padding:8px 30px;background:white;}
+.one-3-1-1{height:48px;font-size:20px;line-height:25px;word-wrap:break-word;overflow:hidden;margin-bottom:10px;}
+.one-3a1{margin-left:254px;margin-right:35px;font-size:20px;color:#0d9572;}
+.one-3a2{font-size:20px;color:#0d9572;}
+.one-3-1:hover{border:1px solid #14b289;border-radius:4px;margin-top:10px;padding:8px 30px;}
+.one-3a1:hover,.one-3a2:hover{text-decoration:none;color:#0d9572;}
+
+.shu{height:30px;border-left:5px solid #03b679;margin-top:5px;float:left;border-radius:4px;}
+
+.q{font-family:微软雅黑;font-size:24px;color:#03b679;padding-bottom:13px;margin-left:20px;}

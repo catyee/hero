@@ -1,0 +1,172 @@
+@import "colors";
+
+// 覆盖浏览器样式 样式
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+input::-ms-clear{display:none;}  /*删除ie浏览器的'删除'*/
+input::-ms-reveal{display:none;} /*删除ie浏览器的'查看密码'*/
+
+
+$min_width : 1200px;
+$minR_width : 1200px;
+$bodyL_width:300px;
+
+// body
+@keyframes bodyFadeIn {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+body{
+    background-color: $body_color;
+    min-width: 1200px;
+    animation: bodyFadeIn 0.1s linear 0.2s forwards;
+}
+
+
+
+
+// 栅格布局系统
+.row {
+    width: 100%;
+    display: flex;
+}
+
+//宽度
+@for $i from 1 through 100 {
+    .width#{$i} {
+      width : $i+%;
+    }
+  }
+
+
+//高
+
+@for $i from 1 through 100 {
+
+    .height#{$i} {
+  
+      width : 100%;
+      clear : both;
+      height: $i+px;
+  
+    }
+  }
+    
+
+//基本样式
+
+//边距
+.no-padding{ padding: 0px; }
+
+//overflow
+
+.hidden{ overflow: hidden }
+.auto{ overflow: auto }
+.scroll{ overflow: scroll }
+
+//字体颜色
+
+.color-primary{ color : $primary_color; }
+.color-danger{ color : $danger_color; }
+.color-white{ color : $white_color; }
+
+//背景颜色
+
+.bg-grey{ background: $grey_color; }
+.bg-white{ background: $white_color; }
+.bg-primary{background-color: $primary_color;}
+
+//字体大小
+
+@for $i from 8 through 30 {
+    .font#{$i}{ font-size: $i+px; }
+  }
+  
+//对齐方式
+
+.right{ text-align: right; }
+.left{ text-align: left; }
+.center{ text-align: center; }
+
+//隐藏
+
+.none{ display: none; }
+
+//光标样式
+
+.pointer{ cursor: pointer }
+.move{ cursor: move }
+
+
+//iconfont
+
+@font-face {
+    font-family: 'iconfont';  /* project id 525253 */
+    src: url('//at.alicdn.com/t/font_525253_y85yxy3uosbp4x6r.eot ');
+    src: url('//at.alicdn.com/t/font_525253_y85yxy3uosbp4x6r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_525253_y85yxy3uosbp4x6r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_525253_y85yxy3uosbp4x6r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_525253_y85yxy3uosbp4x6r.svg#iconfont') format('svg');
+  }
+  
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//common layout
+
+.nav-list{
+    width: $bodyL_width;
+    height: 100%;
+     .logo{
+        margin-left: 40px;
+        img{
+            width: 152px;
+            height: 55px;
+        }
+    }
+    .nav-content{
+        margin-left: 40px;
+        .nav-item{
+            height: 30px;
+            line-height: 30px;
+            width: 183px;
+            span{
+                font-size: 18px;
+                color: $grey_color;
+                margin-left:16px;
+            }
+            .arrow{
+                color: $grey_color;
+                float: right;
+            }
+            &:hover span,&:hover .arrow{
+                color: $black_color;
+            }
+        }
+        
+  
+    
+    }
+}
+.main-content{
+    width: calc(100% - 300px);
+    height: 800px;
+    .main-header{
+        display: flex;
+        min-width: $minR_width;
+        padding: 0 76px 0 20px;
+        height: 60px;
+        line-height: 60px;
+        span{
+            margin: 0 10px;
+        }
+    }
+}

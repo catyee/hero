@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+
+	<!-- 引入样式表 -->
+	<link rel="stylesheet" type="text/css" href="//cdn.dianwutong.com/vendor/bootstrap/bootstrap.min.css" />
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="//cdn.dianwutong.com/vendor/js/html5shiv_min.js"></script>
+	<script src="//cdn.dianwutong.com/vendor/js/respond_min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<header>
+		<div>欢迎使用IEMS云系统，请登录</div>
+	</header>
+
+	<div class="container-fluid body">
+		<div style="height:10vh"></div>
+
+		<div style="height:60vh;display:flex;">
+			<div style="width:30%;"></div>
+			<div class="col-md-2 xingxiang" style="width:20%">
+				<img src="//cdn.dianwutong.com/ems/img/xingxiang.png">
+			</div>
+
+			<div class="col-md-4" style="width:30%">
+				<div style="height:8vh"></div>
+				<div style="color:#d0f4ea;font-size:1.4rem">用户名</div>
+				<div style="width:100%;height:43px;border:none;border-radius: 4px;margin-top:9px;margin-bottom:20px;border-radius: 4px;overflow:hidden;background:#fff;box-sizing:border-box;">
+					<input type="text" id="moni-username" style="width:60%;height:43px;outline:none;border:none;background:#fff; box-sizing:border-box;padding-left:10px;">
+					<!--
+					inline-block 元素之前有自然间距，用注解来换行  消除自然间距
+					 -->
+					<span style="width:40%;display:inline-block; box-sizing:border-box;padding-right:10px;text-align:right;color:red;" id="username-tips"></span>
+				</div>
+				<div style="color:#d0f4ea;font-size:1.4rem">密码</div>
+
+				<div style="width:100%;height:43px;border:none;border-radius: 4px;margin-top:9px;margin-bottom:20px;border-radius: 4px;overflow:hidden;background:#fff;box-sizing:border-box;">
+					<input type="password" id="moni-password" style="width:60%;height:43px;outline:none;border:none;box-sizing:border-box;padding-left:10px;">
+					<!--
+					inline-block 元素之前有自然间距，用注解来换行  消除自然间距
+					 -->
+					<span style="width:40%;display:inline-block; box-sizing:border-box;padding-right:10px;text-align:right;color:red;" id="password-tips"></span>
+				</div>
+
+				<div style="display: flex;align-items:center">
+					<input type="checkbox" id="moni-remember">
+					<div style="color:#ffffff;margin-left:10px;">记住密码</div>
+				</div>
+				<div id="check-in-btn" style="width:176px;height:43px;background-image: url(//cdn.dianwutong.com/ems/img/btn-1.png);font-size:22px;color:#ffffff;line-height:43px;text-align:center;margin-top:20px;cursor: pointer;">登 录</div>
+				<div class="height10"></div>
+				<div id="role-selector" class="color-white"></div>
+			</div>
+		</div>
+	</div>
+
+	<div style="width:100%;background:#00d5ac;text-align:center;min-height:6rem;height:10vh;border-top:1px solid #40e0c1;">
+		<div style="width:100%;height:1.4rem;clear:both;"></div>
+		<div style="display:flex;color:#ffffff;justify-content: center;font-size:1rem">
+			<div style="border-right:1px solid #8aecd9;padding:0 1rem;cursor: pointer;">电务通APP
+				<img alt="" src="//cdn.dianwutong.com/ems/img/New.png" style="margin-top:-5px">
+			</div>
+			<div style="border-right:1px solid #8aecd9;padding:0 1rem;cursor: pointer;">版本更新 v2.0.0</div>
+			<div style="border-right:1px solid #8aecd9;padding:0 1rem;cursor: pointer;">技术中心</div>
+			<div style="border-right:1px solid #8aecd9;padding:0 1rem;cursor: pointer;">联系我们</div>
+			<div style="border-right:1px solid #8aecd9;padding:0 1rem;cursor: pointer;">在线交流</div>
+			<div style="padding:0 1rem;">合作伙伴 中港世能有限公司</div>
+		</div>
+		<div style="width:100%;height:1rem;clear:both;"></div>
+		<div style="color:#8de6d0;font-size:1rem;">Copyright &copy; 2015-2016 北京电务通能源股份有限公司 </div>
+	</div>
+	<script src="http://cdn.bootcss.com/rxjs/5.2.0/Rx.min.js"></script>
+	<script src="//cdn.dianwutong.com/vendor/jquery.min.js"></script>
+	<script src="//cdn.dianwutong.com/vendor/jquery.cookie.js"></script>
+</body>
+
+</html>

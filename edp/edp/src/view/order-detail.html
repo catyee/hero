@@ -1,0 +1,224 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 right"  style="padding:0;">
+			<div style="background:#e8e8e8;height:48px;line-height:48px;padding:0 20px;">
+				<div class="row">
+					<div class="col-md-2">
+						<span style="font-size:18px;">抢修单</span>
+					</div>
+					<div class="col-md-8"></div>
+					<div class="col-md-2" style="text-align:right;">
+						<a href="repairing-list.html" style="color:#03b679;">返回正在解决列表</a>
+					</div>
+				</div>
+			</div>
+			<div style="padding:0 10px;">
+			<div class="list1  bg-color-white">
+				<div class="list-head">抢修单</div>
+				<table style="font-size:18px;">
+					<tr>
+						<td class="list-body1">报警描述</td>
+						<td  class="list-body2">
+							<div class="row">
+								<div class="col-md-10"  id="bug-desc"></div>
+								<div class="col-md-2"><a id="to-inspection-bug" href="#" style="cursor:Pointer;text-decoration:none;color:#03b679;display:none;font-size:14px;">查看详情</a></div>
+							 </div>
+						</td>
+					</tr>
+					<tr>
+						<td class="list-body1">配电室</td>
+						<td   class="list-body2" id="power-room"></td>
+					</tr>
+					<tr>
+						<td class="list-body1">客户信息</td>
+						<td   class="list-body2"><div id="customer-name" style="display:inline-block;width:600px;"></div>电话：<span id="customer-mobile"></span></td>
+					</tr>
+					<tr>
+						<td class="list-body1">详细地址</td>
+						<td   class="list-body2" id="power-room-address"></td>
+					</tr>
+					<tr>
+						<td class="list-body1">查勘记录</td>
+						<td class="list-body2">
+							<div id="survey-record-con" style="display:flex;overflow:hidden;width:950px;padding:20px 0px"></div>
+						</td>
+					</tr>
+					<tr id="repair-programme-con" style="display:none;">
+						<td class="list-body1">抢修方案</td>
+						<td class="list-body2" id="repair-programme">
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="list-body1">当前状态</td>
+						<td class="list-body2" id="repair-status">
+						</td>
+					</tr>
+					<tr  id="repair-result-tr" style="display:none;">
+						<td class="list-body1">抢修结果</td>
+						<td class="list-body2">
+							<div id="repair-result-con"></div>
+							<div id="repair-excutor"></div>
+						</td>
+					</tr>
+					
+				</table>
+				
+				<div class="btn1">
+						<div class="btn-1" id="destroy-order-btn" style="display:none">销单</div>
+						<div class="btn-2" id="rdefinitive-btn">定性</div>
+						<div class="btn-3" id="survey-send-btn">查勘派遣</div>
+						<div class="btn-2" id="repair-send-btn">抢修派遣</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 定性modal -->
+<div class="modal fade" tabindex="-1" id="definitive-modal">
+  <div class="modal-dialog">
+  	<div class="modal-content">
+	    <div class="modal-header">
+	     	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+            	问题定性
+            </h4>
+	    </div>
+	    <div class="modal-body">
+	      	<div class="row">
+	      		<div class="col-md-12 text-align-l">
+	      			<span>您将要把这个问题定性为：</span>
+	      		</div>
+	      		<div class="col-md-1 text-align-l"></div>
+	      		<div class="col-md-11 text-align-l">
+	      			 <label class="radio">
+				      <input type="radio" name="isInContact" class="modal-is-in-contact" value="1"checked>
+				     	 合同内
+				    </label>
+				    <label class="radio">
+				      <input type="radio" name="isInContact" class="modal-is-in-contact" value="2">
+				   		  合同外
+				    </label>
+	      		</div>
+	      		<div id="modal-repair-programme-panel" class="col-md-12 text-align-l">
+	      			<div >抢修方案</div>
+	      			<div >
+	      				<textarea rows="8" class="form-control" style="resize:none" id="modal-repair-programme"></textarea>
+	      			</div>
+	      		</div>
+	      		<div class="col-md-12 text-align-l">
+	      			<span class="color-red">注意：定性后将不可更改，不可再派遣查勘！</span>
+	      		</div>
+	      	</div>
+	    </div>
+	    <div class="modal-footer">
+	      <span class="btn btn-default" data-dismiss="modal">取消</span>
+	      <span class="btn btn-success" id="modal-submit-definitive">确定</span>
+	    </div>
+	 </div>
+  </div>
+</div>
+
+<!-- 抢修派遣modal -->
+<div class="modal fade" tabindex="-1" id="repair-send-modal">
+  <div class="modal-dialog">
+  	<div class="modal-content">
+	    <div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+          	     抢修派遣
+            </h4>
+	    </div>
+	    <div class="modal-body">
+	      	<div class="row">
+	      		<div class="col-md-12">指定将要派遣的员工（组）：</div>
+	      	</div>
+	      	<div class="row">
+	      		<table class="table table-hover" id="repair-send-stuff-list">
+				    <tbody >
+				      
+				    </tbody>
+				</table>
+	      	</div>
+	    </div>
+	    <div class="modal-footer">
+	      <span class="btn btn-default" data-dismiss="modal">取消</span>
+	      <span class="btn btn-success" id="modal-submit-repair-send">确定</span>
+	    </div>
+	 </div>
+  </div>
+</div>
+
+<!-- 查勘派遣modal -->
+<div class="modal fade" tabindex="-1" id="survey-send-modal">
+  <div class="modal-dialog">
+  	<div class="modal-content">
+	    <div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+          	          查勘派遣
+            </h4>
+	    </div>
+	    <div class="modal-body">
+	    	<div class="height20"></div>
+	        <div class="am-g">
+	      		<div class="col-md-1">&nbsp;</div>
+	      		<div class="col-md-10 text-align-l">指定将要派遣的员工（组）</div>
+	      		<div class="col-md-1">&nbsp;</div>
+	      	</div>
+	      	<div class="row">
+	      		<div class="col-md-1">&nbsp;</div>
+	      		<div class="col-md-10" style="max-height:400px;overflow:auto;">
+	      			<table class="table table-hover" id="survey-send-stuff-list" select-stuff="-1">
+					    <tbody >
+					      
+					    </tbody>
+					</table>
+	      		</div>
+	      		<div class="col-md-1">&nbsp;</div>
+	      	</div>
+	    </div>
+	    <div class="modal-footer">
+	      <span class="btn btn-default" data-dismiss="modal">取消</span>
+	      <span class="btn btn-success" id="modal-survey-send-btn">确定</span>
+	    </div>
+	 </div>
+  </div>
+</div>
+
+
+<!-- 销单modal -->
+<div class="modal fade" tabindex="-1" id="destroy-order-modal">
+  <div class="modal-dialog">
+  	<div class="modal-content">
+	    <div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+          	      系统提示
+            </h4>
+	    </div>
+	    <div class="modal-body">
+	    	<div class="height20"></div>
+	        <div class="row">
+	      		<div class="col-md-1">&nbsp;</div>
+	      		<div class="col-md-10 text-align-l">销单操作不可恢复，您却确定要执行此操作吗？</div>
+	      		<div class="col-md-1">&nbsp;</div>
+	      	</div>
+	    </div>
+	    <div class="modal-footer">
+	      <span class="btn btn-default" data-dismiss="modal">取消</span>
+	      <span class="btn btn-success" id="modal-destroy-order-btn">确定</span>
+	    </div>
+	  </div>
+  </div>
+</div>

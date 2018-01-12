@@ -1,0 +1,44 @@
+<div>
+	<table class="t4" id="inspection-logs-con">
+		<tr>
+			<td colspan="7" class="td4">
+				<div class="row">
+					<div class="col-md-5 font18" style="padding-top:10px;">
+						<img src="//cdn.dianwutong.com/ems/img/rizhi.png" style="margin-left:35px;margin-right:10px;">巡检日志
+					</div>
+					<div class="col-md-7">
+						<div style="width:260px;height:40px;border:1px solid #caebda;margin-left:240px;
+												border-radius:4px;display:flex">
+							<input style="width:190px;padding:10px;border:none;outline:none;margin-left:3px;" readonly placeholder="请选择日期" id="inspection-log-date-select"
+							/>
+							<img src="//cdn.dianwutong.com/ems/img/remove.png" style="padding:12px 0;margin-right:15px;cursor:pointer;" id="reomve-inspection-log-date-select">
+							<img src="//cdn.dianwutong.com/ems/img/rili.png" style="padding:7px 0;cursor:pointer;" id="inspection-log-date-select-btn">
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr class="text-align-c">
+			<td class="td5">巡检时间</td>
+			<td class="td7">日常巡检</td>
+			<td class="td7">复检</td>
+			<td class="td7">突发</td>
+			<td class="td7">异常</td>
+			<td class="td8">巡检人</td>
+		</tr>
+		<tr class="text-align-c" id="empty-tips-container-tr" style="display: none">
+			<td colspan="6">
+				<div id="empty-tips-container" style="height:260px">
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<div class="height50"></div>
+	<nav class="text-align-c">
+		<ul class="pagination pagination-lg" id="inspection-log-pagination" page="1">
+
+		</ul>
+	</nav>
+
+</div>

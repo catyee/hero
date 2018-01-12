@@ -1,0 +1,238 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 main" style="padding:0;">
+            <div style="background:#e8e8e8;height:48px;line-height:48px;padding:0 20px;">
+                <div class="row">
+                    <div class="col-md-2">
+                        <span style="font-size:18px;">操作票</span>
+                    </div>
+                    <div class="col-md-8"></div>
+                    <div class="col-md-2" style="text-align:right;">
+                        <a href="operation-order-list.html" style="color:#03b679;">返回操作票列表</a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding:30px 0 0 75px;">
+                <div class="piao bg-color-white">
+                    <div style="display:flex;">
+                        <div class="piao-head">
+                            <img src="//cdn.dianwutong.com/ems/img/paio.png" class="piao-head-left">
+                        </div>
+                        <div class="piao-head-right" style="display:flex;justify-content:space-between;">
+                            <div>操作票</div>
+                            <div id="status" class="color-orange font16" style="padding-right:10px"></div>
+                        </div>
+                    </div>
+                    <div class="bg-color-white">
+                        <div id="edit-panel">
+                            <textarea name="editor" id="operation-report-editor" style="display:none;"></textarea>
+                            <div class="height30" style="background:rgba(1,1,1,0)"></div>
+
+                        </div>
+                        <div style="display:flex;background:white;justify-content:center;">
+                            <div class="piao-foot-baocun" id="save-order" style="display:none">保 存</div>
+                            <div class="piao-foot-baocun" id="re-save-order" style="display:none">保存回填内容</div>
+                            <div class="piao-foot-tijiao" id="submit-order" style="display:none">提 交</div>
+                            <div class="piao-foot-tijiao" id="teamer-save-order" style="display:none">提交</div>
+
+                            <div class="piao-foot-baocun" id="reject-order" style="display:none">驳回</div>
+                            <div class="piao-foot-tijiao" id="adopt-order" style="display:none">通过</div>
+                            <div class="piao-foot-baocun" id="foreman-reject-order" style="display:none">驳回</div>
+                            <div class="piao-foot-tijiao" id="send-email" style="display:none">发送邮件</div>
+
+                            <div class="piao-foot-baocun" id="customer-reject-order" style="display:none">客户驳回</div>
+                            <div class="piao-foot-tijiao" id="customer-adopt-order" style="display:none">客户通过</div>
+
+                            <div class="piao-foot-baocun" id="upload-result" style="display:none;background:#03b679;">
+                                上传工作结果
+                            </div>
+                            <div class="piao-foot-tijiao" id="download-order" style="display:none;background:#03b679;">
+                                下载操作票
+                            </div>
+
+                            <div class="piao-foot-baocun" id="file-btn" style="display:none;">归档</div>
+
+                        </div>
+                    </div>
+
+                    <!-- 工作流程 -->
+                    <div class="row">
+                        <div style="background:white;" class="col-md-10 col-md-offset-1" id="status-list-panel">
+                            <div class="height30"></div>
+                            <div class="row">
+                                <div class="font16">工作流程</div>
+                                <div class="gray-line-3"></div>
+                            </div>
+                            <div class="height10"></div>
+                            <div>
+                                <div class="row" id="status-container">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="height30" style="background:rgba(1,1,1,0)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 组团长审核 -->
+<div class="modal fade" tabindex="-1" id="teamer-save-order-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;
+                </button>
+                <h4 class="modal-title">
+                    系统提示
+                </h4>
+            </div>
+            <input type="hidden" id="ignore-emergency-id" value=""/>
+            <div class="modal-body">
+                保存将视为审核通过，是否继续？
+            </div>
+            <div class="modal-footer">
+                <span class="btn btn-default" data-dismiss="modal">取消</span>
+                <span class="btn btn-success" id="modal-teamer-save-order">继续</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 组团长审核 -->
+<div class="modal fade" tabindex="-1" id="foreman-send-order-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;
+                </button>
+                <h4 class="modal-title">
+                    系统提示
+                </h4>
+            </div>
+            <div class="modal-body">
+                您已经确认操作票无误并且发送给客户吗？
+            </div>
+            <div class="modal-footer">
+                <span class="btn btn-default" data-dismiss="modal">取消</span>
+                <span class="btn btn-success" id="modal-foreman-send-order">确认</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 驳回添加原因 -->
+<div class="modal fade" tabindex="-1" id="reject-reason-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;
+                </button>
+                <h4 class="modal-title" >
+                    驳回操作票
+                </h4>
+            </div>
+            <input type="hidden" id="modal-reject-is-customer" value="0"/>
+            <div class="modal-body">
+                <div class="height20"></div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        请填写驳回操作票的理由，并且给出合理的建议。
+                    </div>
+                    <div class="height10"></div>
+                    <div class="col-md-offset-1 col-md-10">
+                        <textarea name="" id="reject-reason" cols="30" rows="10" class="form-control"
+                                  style="resize:none"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="btn btn-default" data-dismiss="modal">取消</span>
+                <span class="btn btn-success" id="modal-save-reject-reason">确定</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 抢修班长代替客户点击同意按钮  / 抢修组长上传工作结果-->
+<div class="modal fade" tabindex="-1" id="upload-images-modal">
+    <div class="modal-dialog" style="width: 800px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;
+                </button>
+                <h4 class="modal-title">
+                    系统提示
+                </h4>
+            </div>
+            <input type="hidden" id="modal-upimg-is-customer" value="0"/>
+            <div class="modal-body">
+                <div class="height30"></div>
+                <div roleType == 40>如果您审核通过该操作票，需要上传客户同意该操作方案的图片作为凭证(上传之后不可更改)。</div>
+                <div roleType == 50> 请选择操作票的照片上传，照片必须清晰完整(上传之后不可更改)。</div>
+                <div roleType == 90>归档凭证得照片必须包含归档人得签字，且保证清晰可辨识(上传之后不可更改)。</div
+
+                <div class="height20"></div>
+                <div id="modal-images-container"></div>
+                <div class="height20"></div>
+                <input type="file" class="hide" id="modal-select-img-input">
+                <button class="btn btn-sm" id="modal-select-img-btn">选择文件</button>
+                &nbsp;&nbsp;&nbsp;<span id="modal-select-img-tips"></span>
+                <div class="height30"></div>
+            </div>
+            <div class="modal-footer">
+                <span class="btn btn-default" data-dismiss="modal">取消</span>
+                <span class="btn btn-success" id="modal-upload-image-btn" disabled="true">确认</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 输入邮箱密码 -->
+<div class="modal fade" tabindex="-1" id="email-password-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    发送邮件失败
+                </h4>
+            </div>
+            <input type="hidden" id="reject-type" value=""/>
+            <div class="modal-body">
+                <div class="height20"></div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        发送邮件失败，请输入您的邮箱(<span id="modal-view-email"></span>)密码：
+                    </div>
+                    <div class="height10"></div>
+                    <div class="col-md-offset-1 col-md-10">
+                        <input class="form-control" id="modal-email-password"/>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="btn btn-default" data-dismiss="modal">取消</span>
+                <span class="btn btn-success" id="email-password-modal-confirm">确定</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 发送邮件的遮罩层 -->
+<div class="send-email-overlay" id="send-email-overlay">
+    <span style="height:50%; display:inline-block;vertical-align:bottom;"></span>
+    <img src="//cdn.dianwutong.com/ems/img/waiting.gif">
+    <div class="color-white" id="send-email-tips">正在生成操作票PDF文件...</div>
+</div>
+

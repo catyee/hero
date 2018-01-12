@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+
+@import "./common/common";
+
+.header-nav .repair-log-list{border-bottom:3px solid #03b679;}
+.header-nav .repair-log-list a{color:#03b679;opacity: 1;font-weight:bold;}
+.right{width:1200px;min-height:600px;background:#f3f3f3;border:1px solid #c1d7c5;border-radius:4px;padding:28px 28px 50px 28px;}
+
+.base-info{padding:0px 75px}
+
+.right .main-container{border:1px solid #d8d8d8;background:white;}
+.info{
+	border-right:1px dashed #b1b1b1;line-height:30px;
+}
+.info-left {border-left:1px dashed #b1b1b1;border-right:1px dashed #b1b1b1;padding:0px 40px;}
+
+.info-right{padding:0px 40px;}
+
+.repair-table{border-top:#b2b2b2 1px solid;width:100%;border-bottom:#b2b2b2 1px solid;width:100%;}
+.repair-table td{padding:20px;border-right:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6}
+.repair-table tr td:nth-of-type(2){padding:20px;border-right:none;border-bottom:1px solid #d6d6d6}
+
+.repair-table tr:last-child td{border-bottom:none;}
+
+.common-record{
+	overflow:hidden;box-shadow:-1px 1px 3px #ccc;white-space:nowrap;padding:20px;border:1px solid #eee;
+}
+
+.common-record:hover{
+	border:1px solid #0091dc;
+}
+
+.voice{
+	width:64px;height:64px;background:#d1d1d1;text-align:center;padding:10px;cursor:pointer;
+}
+
+.repair-proccess-con{
+	width:100%;
+}
+
+.repair-proccess-con .state{
+	display:flex;
+}
+
+.repair-proccess-con .state div{
+	width:225px;
+	height:12px;
+}
+
+.repair-proccess-con .process{
+	display:flex;
+	align-items:center;
+}
+
+.repair-proccess-con .circle{
+	width:25px;
+	height:25px;
+	border-radius:50%;
+	background:#e0e0e0;
+	padding:3px;
+	z-index:10;
+
+}
+
+.repair-proccess-con .circle div{
+	width:19px;
+	height:19px;
+	border-radius:50%;
+	background:#fff;
+	font-size:12px;
+	text-align:center;
+	color:#000;
+	line-height:20px;
+}
+
+
+.repair-proccess-con .circle-success{
+	width:25px;
+	height:25px;
+	border-radius:50%;
+	background:#03b679;
+	padding:3px;
+	z-index:10;
+
+}
+
+.repair-proccess-con .circle-success div{
+	width:19px;
+	height:19px;
+	border-radius:50%;
+	background:#fff;
+	font-size:12px;
+	text-align:center;
+	color:#02ff32;
+	line-height:20px;
+}
+
+.repair-proccess-con .bar-success{
+	width:210px;
+	height:6px;
+	background:#03b679;
+}
+
+.repair-proccess-con .bar{
+	width:210px;
+	height:10px;
+	background:#e0e0e0;
+}
+
+.repair-proccess-con .time {
+	display:flex;
+}
+
+.repair-proccess-con .time div{
+	width:225px;
+}
+
+#survey-record-con{
+	display:flex;overflow:hidden;width:987px;
+}

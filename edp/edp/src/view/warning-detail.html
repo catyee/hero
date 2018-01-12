@@ -1,0 +1,123 @@
+
+<input type="hidden" id="tag-name" value="-1"/>
+<input type="hidden" id="channel-name" value="-1"/>
+<input type="hidden" id="alarm-time"/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 right" style="padding:0;">
+            <div style="background:#e8e8e8;height:48px;line-height:48px;padding:0 20px;">
+                <div class="row">
+                    <div class="col-md-2">
+                        <span style="font-size:18px;">警情</span>
+                    </div>
+                    <div class="col-md-8"></div>
+                    <div class="col-md-2" style="text-align:right;">
+                        <a href="system-warning.html" style="color:#03b679;">返回正在报警列表</a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding:18px 50px;">
+                <div style="font-size:18px;margin-bottom:18px;">
+                    <img src="//cdn.dianwutong.com/ems/img/jingqing.png" style="margin-right:20px;"><b>警情</b>
+                </div>
+
+                <table class="table-1">
+                    <tr>
+                        <td class="td1">警情描述</td>
+                        <td class="td2" id="alarm-desc"></td>
+                    </tr>
+                    <tr>
+                        <td class="td1">报警点</td>
+                        <td class="td2" id="alarm-tag"></td>
+                    </tr>
+                    <tr>
+                        <td class="td1">报警值</td>
+                        <td class="td2" id="alarm-value"></td>
+                    </tr>
+                    <!--  <tr>
+                        <td class="td1">实时值</td>
+                        <td class="td2" id="rt-value"></td>
+                    </tr>  -->
+                    <tr>
+                        <td class="td1">报警设定值</td>
+                        <td class="td2" id="threshold-value"></td>
+                    </tr>
+                    <tr>
+                        <td class="td1">报警类型</td>
+                        <td class="td2" id="alarm-type"></td>
+                    </tr>
+                    <tr>
+                        <td class="td1">报警时间</td>
+                        <td class="td2" id="alarm-time-view"></td>
+                    </tr>
+                    <tr style="border-top: 1px solid black">
+                        <td class="td1">配电室</td>
+                        <td class="td2" id="power-room"></td>
+                    </tr>
+                    <tr>
+                        <td class="td1">配电室地址</td>
+                        <td class="td2" id="power-room-address"></td>
+                    </tr>
+                    <tr>
+                        <td class="td1">客户</td>
+                        <td class="td2" id="power-room-customer"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">客户联系人</td>
+                        <td class="td2" id="customer-contact"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1">客户电话</td>
+                        <td class="td2" id="customer-mobile"></td>
+                    </tr>
+
+                </table>
+                <div class="list-foot">
+                    <!--<div class="height45"></div>
+                            <div style="width:100%;height:350px;" id="field-data"></div>
+                            <div class="height38"></div>
+                            <div style="width:100%;height:350px;" id="real-time-data"></div> -->
+                    <div class="height50"></div>
+                    <div class="row">
+                        <div class="col-md-9"></div>
+                        <div class="col-md-3">
+                            <button class="btn btn-warning btn-lg" id="create-order-button">生成抢修单</button>
+                        </div>
+                    </div>
+                    <div class="height80"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="create-order-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    生成抢修单
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="height10"></div>
+                    <div class="col-md-12 text-align-l">问题描述</div>
+                    <div class="col-md-12">
+                        <textarea class="form-control" rows="5" id="model-system-bug-desc"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">取消</button>
+                <button class="btn btn-success" id="model-create-repair-order">确定</button>
+            </div>
+        </div>
+    </div>
+</div>

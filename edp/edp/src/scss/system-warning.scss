@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+@import "./common/common";
+
+/*    竖线       */
+
+.shu{height:30px;border-left:5px solid #03b679;margin-top:5px;float:left;border-radius:4px;}
+
+.q{font-family:微软雅黑;font-size:24px;color:#03b679;padding-bottom:13px;
+margin-left:20px;}
+
+/*  系统报警   */
+.header-nav .system-warning{border-bottom:3px solid #03b679;  }
+.header-nav .system-warning a{color:#03b679;opacity: 1;font-weight:bold;}
+
+/*  选择   */
+.search{width:1200px;height:95px;border:1px solid #bed5c3;background:#f3f3f3;border-radius:4px;}
+.search-flew{display: flex;justify-content:space-around;}
+.search1{width:530px;height:38px;border:none;outline:none;border-radius:4px;background-image: url(//cdn.dianwutong.com/ems/home/img/sou.png);
+background-repeat:no-repeat;background-position:465px 8px;padding-left:12px;}
+.search1div{position: relative;background-color: transparent;width: 509px;height: 40px;overflow: hidden; margin-top:25px;
+border:1px solid #bed5c3;border-radius: 8px;}
+.search2{width:1000px;height:38px;border-radius:4px;border:none;padding:10px 12px;outline:none;}
+
+
+.right{width:1200px;min-height:800px;background:#f3f3f3;border:1px solid #c1d7c5;border-radius:4px;
+padding:13px 20px;}
+
+
+.baojingdiv{display:flex;flex-wrap:wrap;justify-content:space-between;}
+
+.baojing{width:565px;height:180px;display:flex;margin-bottom:25px;}
+.baojing .baojing-left-top{width:175px;height:140px;background:#eaeaea;}
+.baojing .baojing-left-bottom{width:175px;height:40px;background:#ff8c11;text-align:center;color:#fefefe;font-size:16px;line-height:40px;}
+.baojing .baojing-left-top1{margin-top:12px;margin-left:12px;height:48px;width:48px;background:url("//cdn.dianwutong.com/ems/home/img/suoxiao.png");display:inlne-block}
+.baojing .baojing-left-top2{font-size:18px;margin-left:65px;margin-top:15px;color:#818181;}
+.baojing .baojing-left-top3{font-size:20px;text-align:center;margin-top:15px;color:#696969;}
+
+.baojing-hover{width:565px;height:180px;display:flex;margin-bottom:25px;}
+.baojing-hover .baojing-left-top{width:175px;height:140px;background:#ff8c11;text-align:center;}
+.baojing-hover .baojing-left-bottom{width:175px;height:40px;background:#e87f0f;text-align:center;color:#fefefe;font-size:16px;line-height:40px;}
+.baojing-hover .baojing-left-top1{margin-top:12px;margin-left:12px;height:48px;width:48px;background:url("//cdn.dianwutong.com/ems/home/img/fangda.png");display:inline-block;background-size:48px 48px;}
+.baojing-hover .baojing-left-top2{font-size:18px;margin-left:65px;margin-top:15px;color:#ffffff;}
+.baojing-hover .baojing-left-top3{font-size:20px;display:inline-block;color:#fefefe;border-bottom:3px solid #ffffff;margin:15px auto;}
+
+
+.yujing{width:565px;height:180px;display:flex;margin-bottom:25px;}
+.yujing .baojing-left-top{width:175px;height:140px;background:#eaeaea;}
+.yujing .baojing-left-bottom{width:175px;height:40px;background:#fbc183;text-align:center;color:#fefefe;font-size:16px;line-height:40px;}
+.yujing .baojing-left-top1{margin-top:12px;margin-left:12px;height:48px;width:48px;background:url("//cdn.dianwutong.com/ems/home/img/bell.png");display:inline-block}
+.yujing .baojing-left-top2{font-size:18px;margin-left:65px;margin-top:15px;color:#818181;}
+.yujing .baojing-left-top3{font-size:20px;text-align:center;margin-top:15px;color:#696969;}
+
+.yujing-hover{width:565px;height:180px;display:flex;margin-bottom:25px;}
+.yujing-hover .baojing-left-top{width:175px;height:140px;background:#ff8c11;text-align:center;}
+.yujing-hover .baojing-left-bottom{width:175px;height:40px;background:#e87f0f;text-align:center;color:#fefefe;font-size:16px;line-height:40px;}
+.yujing-hover .baojing-left-top1{margin-top:12px;margin-left:12px;height:48px;width:48px;background:url("//cdn.dianwutong.com/ems/home/img/bell-1.png");display:inline-block;background-size:48px 48px;}
+.yujing-hover .baojing-left-top2{font-size:18px;margin-left:65px;margin-top:15px;color:#ffffff;}
+.yujing-hover .baojing-left-top3{font-size:20px;display:inline-block;color:#fefefe;border-bottom:3px solid #ffffff;margin:15px auto;}
+
+.baojing-right{width:388px;height:180px;background:white;padding:20px 32px 0 32px;font-size:18px;color:#474747;}

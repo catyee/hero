@@ -1,0 +1,151 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 right" style="padding:0;">
+			<div style="background:#e8e8e8;height:48px;line-height:48px;padding:0 20px;">
+				<div class="row">
+					<div class="col-md-2">
+						<span style="font-size:18px;">抢修日志</span>
+					</div>
+					<div class="col-md-8"></div>
+					<div class="col-md-2" style="text-align:right;">
+						<a href="repair-order-list.html" style="color:#03b679;">返回抢修日志列表</a>
+					</div>
+				</div>
+			</div>
+			<div style="padding:18px 20px 18px 20px;">
+				<div class="main-container">
+					<div class="base-info">
+						<div class="height35"></div>
+						<div class="row">
+							<div class="col-md-4"></div>
+							<div class="col-md-4 text-align-c font18 bold">抢修日志</div>
+							<div class="col-md-4 text-align-r font18 color-gray-a" style="padding:0px" >
+								<button class="btn btn-success" id="re-check" disabled="disabled" style="border:none;outline:none;">&nbsp;复&nbsp;检&nbsp;</button>
+							</div>
+						</div>
+						<div class="height60"></div>
+						<div class="row info font14">
+							<div class="col-md-6 info-left">
+								<div>配电室名称：<span id="power-room"></span></div>
+								<div>配电室等级：<span id="power-room-grade"></span></div>
+								<div>地址：<span id="power-room-address"></span></div>
+							</div>
+							<div class="col-md-6 info-right">
+								<div>客户：<span id="power-room-customer"></span></div>
+								<div>客户电话：<span id="power-room-customer-mobile"></span></div>
+							</div>
+						</div>
+					</div>
+					<div class="height80"></div>
+					<div id="inspection-content">
+						<table class="repair-table">
+							<tr>
+								<td class="font14 bold text-align-c" style="width:14.7%">警情</td>
+								<td class="font14" id="bug-desc"></td>
+							</tr>
+							<tr>
+								<td class="font14 bold text-align-c" style="width:170px;">现场情况</td>
+								<td class="font14" id="survey-record-con">
+									
+								</td>
+							</tr>
+							<tr>
+								<td class="font14 bold text-align-c" style="width:14.7%">抢修方案</td>
+								<td class="font14" id="repair-programme"></td>
+							</tr>
+							
+							<tr>
+								<td class="font14 bold text-align-c" style="width:14.7%">抢修过程</td>
+								<td class="font14">
+									<div class="repair-proccess-con">
+										<div class="state">
+											<div class="font12">产生报警</div>
+											<div class="font12">开始查勘</div>
+											<div class="font12">开始抢修</div>
+											<div class="font12">抢修完成</div>
+										</div>
+										<div class="height15"></div>
+										<div class="process" id="repair-proccess">
+											
+										</div>
+										<div class="height15"></div>
+										<div class="time font12" id="repair-proccess-time">
+											
+										</div>
+									</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="font14 bold text-align-c" style="width:14.7%">抢修结果</td>
+								<td class="font14">
+									<div id="repair-result-con"></div>
+									<div id="repair-excutor"></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 复检对话框 -->
+<div class="modal fade" id="re-check-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+	<div class="modal-dialog">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	    
+	    
+	     <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+               设置复检
+            </h4>
+	    </div>
+	    
+	     <div class="modal-body">
+        	<div class="row">
+	    		<div class="col-md-1">&nbsp;</div>
+	    		<div class="col-md-10 text-align-l">复检标题</div>
+	    		<div class="col-md-1">&nbsp;</div>
+	    		
+	    		<div class="col-md-1">&nbsp;</div>
+	    		<div class="col-md-10"><input type="text" class="form-control" id="re-check-title"/></div>
+	    		<div class="col-md-1">&nbsp;</div>
+	    	</div>
+	    	<div class="row height30">
+	    		<div class="col-md-1">&nbsp;</div>
+	    		<div class="col-md-10 text-align-l color-orange font12" id="re-check-title-tips"></div>
+	    		<div class="col-md-1">&nbsp;</div>
+	    	</div>
+	    	<div class="row">
+	    		<div class="col-md-1">&nbsp;</div>
+	    		<div class="col-md-10  text-align-l">复检内容</div>
+	    		<div class="col-md-1">&nbsp;</div>
+	    		
+	    		<div class="col-md-1">&nbsp;</div>
+	    		<div class="col-md-10">
+	    			<textarea class="form-control" rows="5" id="re-check-desc"></textarea>
+	    		</div>
+	    		<div class="col-md-1">&nbsp;</div>
+	    	</div>
+	      	<div class="row height30">
+	    		<div class="col-md-1">&nbsp;</div>
+	    		<div class="col-md-10 text-align-l color-orange font12" id="re-check-desc-tips"></div>
+	    		<div class="col-md-1">&nbsp;</div>
+	    	</div>
+         </div>
+	     <div class="modal-footer">
+            <span class="btn btn-default" data-dismiss="modal">取消</span>
+      	    <span class="btn btn-success" id="btn-comfirm-reckeck">确定</span>
+         </div>
+       </div>
+    </div>
+  </div> 
+      

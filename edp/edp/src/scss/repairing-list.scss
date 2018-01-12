@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+@import "./common/common";
+
+/*  正在解决   */
+.header-nav .repairing-list{border-bottom:3px solid #03b679;  }
+.header-nav .repairing-list a{color:#03b679;opacity: 1;font-weight:bold;  }
+
+.right{width:1200px;min-height:800px;background:#f3f3f3;border:1px solid #c1d7c5;border-radius:4px;
+padding:35px 30px;}
+
+
+.qtn{width:1136px;height:240px;border:1px solid #d0ece8;border-radius:4px;background:#ffffff;display:flex;}
+.qtn-green{height:100%;width:5px;background:#05c3a6;border-radius:4px;}
+.qtn-white{height:240px;width:5px;background:white;border-radius:4px;}
+.top{width:1125px;height:125px;display: flex;}
+.top-top{display:flex;margin-left:45px;font-size:20px;margin-top:20px;}
+.top-top-1{margin-right:130px;color:#ff8c11;}
+.top-top-2{margin-right:130px;}
+.top-bottom{display:flex;margin-left:40px;margin-top:5px;}
+.top-bottom-yuan{width:65px;height:65px;border:1px solid #fdfdfd;border-radius:50%;background:#efeeee;}
+.top-bottom-xian{width:160px;height:10px;background:#e2e2e2;margin-top:29px;}
+
+.top-bottom-neiyuan-1{width:45px;height:45px;border:1px solid #ededed;border-radius:50%;background:#ffffff;
+margin-top:9px;margin-left:9px;background-image: url(//cdn.dianwutong.com/ems/img/icon-4-4.png);background-repeat: no-repeat;background-position:8px 7px;}
+.top-bottom-neiyuan-2-1{width:45px;height:45px;border:1px solid #ededed;border-radius:50%;background:#ffffff;
+margin-top:9px;margin-left:9px;background-image: url(//cdn.dianwutong.com/ems/img/icon-3.png);background-repeat: no-repeat;background-position:8px 7px;}
+.top-bottom-neiyuan-2-2{width:45px;height:45px;border:1px solid #ededed;border-radius:50%;background:#ffffff;
+margin-top:9px;margin-left:9px;background-image: url(//cdn.dianwutong.com/ems/img/icon-3-3.png);background-repeat: no-repeat;background-position:8px 7px;}
+.top-bottom-neiyuan-3-1{width:45px;height:45px;border:1px solid #ededed;border-radius:50%;background:#ffffff;
+margin-top:9px;margin-left:9px;background-image: url(//cdn.dianwutong.com/ems/img/icon-2.png);background-repeat: no-repeat;background-position:8px 7px;}
+.top-bottom-neiyuan-3-2{width:45px;height:45px;border:1px solid #ededed;border-radius:50%;background:#ffffff;
+margin-top:9px;margin-left:9px;background-image: url(//cdn.dianwutong.com/ems/img/icon-2-2.png);background-repeat: no-repeat;background-position:8px 7px;}
+.top-bottom-neiyuan-4-1{width:45px;height:45px;border:1px solid #ededed;border-radius:50%;background:#ffffff;
+margin-top:9px;margin-left:9px;background-image: url(//cdn.dianwutong.com/ems/img/icon-1.png);background-repeat: no-repeat;background-position:8px 7px;}
+.top-bottom-neiyuan-4-2{width:45px;height:45px;border:1px solid #ededed;border-radius:50%;background:#ffffff;
+margin-top:9px;margin-left:9px;background-image: url(//cdn.dianwutong.com/ems/img/icon-1-1.png);background-repeat: no-repeat;background-position:8px 7px;}
+
+
+.top-right{margin-top:20px;margin-left:10px;font-size:18px;width:200px}
+
+.bottom{display: flex;}
+
+.bottom-top-1{width:203px;height:49px;background-image: url(//cdn.dianwutong.com/ems/img/biankuang-1.png);
+margin-left:20px;margin-right:5px;font-size:18px;padding-top:18px;padding-left:10px;color:#ffa75e;}
+.bottom-top-2{width:203px;height:49px;background-image: url(//cdn.dianwutong.com/img/bb.png);
+margin-left:20px;margin-right:5px;font-size:18px;padding-top:18px;padding-left:10px;}
+
+.bottom-bottom-left{width:975px;padding-left:20px;font-size:16px;color:#000000;margin-top:25px;}
+.bottom-bottom-right{width:115px;height:45px;background:#05c3a6;border-radius:4px;
+text-align:center;line-height:45px;font-size:20px;color:#ffffff;text-decoration:none;display: inline-block}
+
+.bottom-bottom-right:hover{
+	text-decoration:none;
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

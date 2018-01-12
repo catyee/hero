@@ -1,0 +1,101 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 right">
+			<div class="piao bg-color-white">
+				<div style="display:flex; background:#eee">
+					<div class="piao-head">
+						<img src="//cdn.dianwutong.com/ems/img/paio.png" class="piao-head-left">
+					</div>
+					<div class="piao-head-center">操作票</div>
+					<div style="position: relative;background-color: transparent;width: 240px;height: 40px;overflow: hidden;margin-top:15px;
+border:1px solid #cccccc;border-radius: 4px;margin-left:20px;">
+						<select class="piao-head-input-1" id="power-room">
+							<option value="-1">选择配电室</option>
+						</select>
+					</div>
+					<div style="width:230px;margin-top:15px;margin-left:35px;">
+						<div class="input-control" style="padding-right:5px;padding-left:12px;">
+							<input type="text" id="start-ticket-date" placeholder="提票日期">
+							<div class="clear-btn">
+								<i class="iconfont" id="clear-operation-select-date">&#xe60a</i>
+							</div>
+						</div>
+					</div>
+					<div class="btn-group" style="margin-top:15px;margin-left:35px">
+						<a class="btn  btn-default ticket-status" status="-1" style="height:38px;padding-top:8px;">全部</a>
+						<a class="btn btn-default ticket-status" status="0" style="height:38px;padding-top:8px;">未完成</a>
+						<a class="btn btn-default ticket-status" status="1" style="height:38px;padding-top:8px;">已完成</a>
+					</div>
+				</div>
+				<div id="tickets-con">
+					<table class="ellipsis poeration-order-con" id="poeration-order-con">
+						<tr>
+							<td>配电室</td>
+							<td>存档号</td>
+							<td>提票时间</td>
+							<td>审批状态</td>
+							<td>完成情况</td>
+						</tr>
+					</table>
+				</div>
+				<div id="notickets" style="display:none"></div>
+				<div class="bg-color-white">
+					<div class="height100"></div>
+					<div class="row">
+						<div class="col-md-10"></div>
+						<div class="col-md-2">
+							<button class="btn btn-success" id="add-order-btn">添加操作票</button>
+						</div>
+					</div>
+					<div class="height20"></div>
+				</div>
+			</div>
+			<nav class="text-align-c">
+				<ul class="pagination pagination-md" id="pagination" page="1">
+
+				</ul>
+			</nav>
+			<div class="height20"></div>
+		</div>
+	</div>
+</div>
+
+<!-- 新增操作票向导 -->
+<div class="modal fade" tabindex="-1" id="add-order-setting-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">新增工作票向导</div>
+			<div class="modal-body">
+				<div class="height10"></div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;&nbsp;&nbsp;请指定将要为哪个配电室添加工作票，然后指定您要添加哪种工作票：</div>
+				</div>
+				<div class="height30"></div>
+				<div class="row">
+					<div class="col-md-2 text-align-r">
+						<div class="height5"></div>
+						配电室
+					</div>
+					<div class="col-md-9">
+						<select class="form-control" id="modal-add-order-power-room"></select>
+					</div>
+					<div class="height10"></div>
+					<div class="col-md-2 text-align-r">
+						<div class="height5"></div>
+						类型
+					</div>
+					<div class="col-md-9">
+						<select class="form-control" id="modal-order-type">
+
+						</select>
+					</div>
+				</div>
+				<div class="height30"></div>
+			</div>
+			<div class="modal-footer">
+				<span class="btn  btn-default" data-dismiss="modal">取消</span>
+				<span class="btn  btn-success  bg-color-green-b" id="modal-to-operation-detail-btn">下一步</span>
+			</div>
+		</div>
+	</div>
+</div>

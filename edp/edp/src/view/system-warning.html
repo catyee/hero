@@ -1,0 +1,86 @@
+
+<div class="height6"></div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 right">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="shu"></div><div class="q">正在报警</div>
+				</div>
+				<div class="col-md-2">
+					<div class="btn-group" id="">
+						<a class="btn btn-success btn-default alarm-status" status="-1">全部</a>
+						<a class="btn  btn-default alarm-status" status="1" >实时</a>
+						<a class="btn  btn-default alarm-status" status="2" >历史</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="search-select">
+						<div>
+							<input type="text" placeholder="配电室名称/客户名称" id="power-room-search-key" />
+							<span class="remove" id="remove-pr"><i class="iconfont">&#xe628;</i> </span>
+						</div>
+						<div class="options-panel" id="power-room-list">
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="height1"  style="border-bottom:1px solid #bed5c3;"></div>
+				</div>
+			</div>
+			<div class="height20"></div>
+			<div class="text-align-r">
+				共搜索到&nbsp;<span class="color-green" id="result-count">0</span>&nbsp;条报警
+			</div>
+			<div class="height40"></div>
+			<div class="baojingdiv" id="alarm-items-con">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 忽略报警对话框 -->
+<div class="modal fade" tabindex="-1" id="ignore-alarm-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close"
+						data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					系统提示
+				</h4>
+
+			</div>
+			<div class="modal-body">忽略报警将无法找回，是否继续？</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="confirm-ignore-alarm">继续</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 不能忽略 提示 -->
+<div class="modal fade" tabindex="-1" id="disable-ignore-alarm-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close"
+						data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title">
+					系统提示
+				</h4>
+
+			</div>
+			<div class="modal-body">该报警为实时报警，暂时不可忽略</div>
+			<div class="modal-footer">
+				<span class="btn btn-danger" data-dismiss="modal">知道了</span>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+@import "./common/common";
+
+.header-nav .inspection-log-list{border-bottom:3px solid #03b679;}
+.header-nav .inspection-log-list a{color:#03b679;opacity: 1;font-weight:bold;}
+
+.right{width:1200px;min-height:600px;background:#f3f3f3;border:1px solid #c1d7c5;border-radius:4px;padding:28px 28px 50px 28px;}
+
+.base-info{padding:0px 75px}
+
+.right .main-container{border:1px solid #d8d8d8;background:white;}
+
+.info{
+	border-right:1px dashed #b1b1b1;line-height:30px;
+}
+.info-left {border-left:1px dashed #b1b1b1;border-right:1px dashed #b1b1b1;padding:0px 40px;}
+
+.info-right{padding:0px 40px;}
+
+.inspection-table{border-top:#b2b2b2 1px solid;width:100%;}
+.inspection-table td{padding:20px;border-right:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;text-align:center}
+.inspection-table tr td:nth-of-type(3){padding:20px;border-right:none;border-bottom:1px solid #d6d6d6;text-align:center}
+
+.inspection-table tr:last-child td{border-bottom:1px solid #b2b2b2;}

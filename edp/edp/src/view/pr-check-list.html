@@ -1,0 +1,516 @@
+<div class="xiangmu">
+	<div class="xiangmu-head">
+		<div class="xiangmu-head-1 tab-head active">
+			<div class="tab-title">巡检</div>
+		</div>
+		<div class="xiangmu-head-1 tab-head">
+			<div class="tab-title">复检</div>
+			<div id="recheck-number" class="bubble"></div>
+		</div>
+		<div class="xiangmu-head-1 tab-head">
+			<div class="tab-title">突发</div>
+			<div id="occur-number" class="bubble"></div>
+		</div>
+		<div class="xiangmu-head-2"></div>
+	</div>
+	<div id="tab-panel-inspection" class="tab-body">
+		<div id="inspection-empty-tips-container"></div>
+		<div id="tab-panel-inspection-tail">
+			<div class="height10"></div>
+			<div class="fenlei font14" id="add-check-class">添加分类</div>
+			<div class="height30"></div>
+		</div>
+
+	</div>
+
+	<div id="tab-panel-recheck" class="tab-body" style="display:none;min-height:280px">
+
+	</div>
+
+	<div id="tab-panel-emer" class="tab-body" style="display:none;min-height: 280px">
+
+		<div class="height30"></div>
+	</div>
+
+</div>
+
+
+
+<!-- 添加巡检大类 填写分类名称对话框  -->
+<div class="modal fade" tabindex="-1" id="add-check-class-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					添加分类
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-1">&nbsp;</div>
+					<div class="col-md-10">
+						<div class="color-gray-2 text-align-l">分类名称</div>
+						<div class="">
+							<input type="text" class="form-control" id="modal-check-class-name" />
+						</div>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="modal-add-check-class">确定</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 选择模板对话框 -->
+<div class="modal fade" tabindex="-1" id="check-template-modal">
+	<div class="modal-dialog" style="width:1000px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title">
+					设置模板
+				</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" id="modal-check-class-id" value="-1" />
+				<div class="height20"></div>
+				<div class="row">
+					<div class="col-md-2 text-align-r">
+						提示
+					</div>
+					<div class="col-md-9 text-align-l">
+						<p>选择模板之后，模板项目直接加入到配电室的巡检列表中，多次选择模板将多次添加。</p>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-align-r">模板</div>
+					<div class="col-md-9">
+						<select class="form-control" style="padding:6px;" id="select-check-template">
+							<option value="-1">请选择模板</option>
+						</select>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+				</div>
+				<div class="height20"></div>
+				<div class="row">
+					<div class="col-md-2 text-align-r">
+						<div id="modal-check-item-type-nav">
+							<div class="active">日检</div>
+							<div>周检</div>
+							<div>月检</div>
+						</div>
+					</div>
+					<div class="col-md-9" style="overflow-x:hidden;">
+						<div class="text-align-l template-item-preview" id="daily-template-item-preview" style="display:block;">
+							<table class="table table-bordered">
+								<tr>
+									<th class="text-align-c">启用</th>
+									<th>巡检项</th>
+									<th class="text-align-c">启用</th>
+									<th>巡检项</th>
+								</tr>
+							</table>
+						</div>
+
+						<div class="text-align-l template-item-preview" id="week-template-item-preview">
+							<table class="table table-bordered">
+								<tr>
+									<th class="text-align-c">启用</th>
+									<th>巡检项</th>
+									<th>检查日期</th>
+								</tr>
+							</table>
+						</div>
+
+						<div class="text-align-l template-item-preview" id="month-template-item-preview">
+							<table class="table table-bordered">
+								<tr>
+									<th class="text-align-c">启用</th>
+									<th>巡检项</th>
+									<th>检查日期</th>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+				</div>
+
+				<div class="height20"></div>
+
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="modal-use-template-class">确定</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 编辑巡检分类 -->
+<div class="modal fade" tabindex="-1" id="edit-check-class-modal">
+	<div class="modal-dialog">
+		<div class="modal-content" style="width:1000px">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title">
+					设置模板
+				</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" id="modal-check-class-id" value="-1" />
+				<div class="height20"></div>
+				<div class="row-g">
+					<div class="col-md-2 text-align-r">
+						分类名称
+					</div>
+					<div class="col-md-9 text-align-l">
+						<input type="text" class="form-control" id="modal-edit-class-name" value="" />
+						<input type="hidden" id="modal-edit-class-id" value="-1" />
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+				</div>
+
+				<div class="height20"></div>
+				<div class="row">
+					<div class="col-md-2 text-align-r ">
+						<div id="modal-edit-check-item-type-nav">
+							<div class="active">日检</div>
+							<div>周检</div>
+							<div>月检</div>
+						</div>
+					</div>
+					<div class="col-md-9" style="overflow-x:hidden;">
+						<div class="text-align-l edit-item-preview" id="edit-daily-item-preview" style="display:block;">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="input-group">
+										<input type="text" class="form-control" id="modal-new-daily-item" placeholder="巡检项名称">
+										<span class="input-group-btn">
+											<button class="btn btn-success" type="button" id="modal-new-daily-item-btn">&nbsp;添&nbsp;加&nbsp;</button>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="height5"></div>
+							<table class="table table-bordered bg-color-white">
+								<tr>
+									<th>巡检项</th>
+									<th>操作</th>
+								</tr>
+							</table>
+						</div>
+
+						<div class="text-align-l edit-item-preview" id="edit-week-item-preview">
+
+							<div class="row">
+								<div class="col-md-5">
+									<input type="text" class="form-control" id="modal-new-week-item-content" placeholder="巡检项名称">
+								</div>
+
+								<div class="col-md-5">
+									<select class="form-control" id="modal-new-week-item-week">
+										<option value="1">每周一</option>
+										<option value="2">每周二</option>
+										<option value="3">每周三</option>
+										<option value="4">每周四</option>
+										<option value="5">每周五</option>
+										<option value="6">每周六</option>
+										<option value="7">每周日</option>
+									</select>
+								</div>
+
+								<div class="col-md-2">
+									<button class="btn btn-success" id="modal-new-week-item-btn">&nbsp;添&nbsp;加&nbsp;</button>
+								</div>
+							</div>
+							<div class="height5"></div>
+
+							<table class="table table-bordered bg-color-white">
+								<tr>
+									<th>巡检项</th>
+									<th>检查日期</th>
+									<th>操作</th>
+								</tr>
+							</table>
+						</div>
+
+						<div class="text-align-l edit-item-preview" id="edit-month-item-preview">
+
+							<div class="row">
+								<div class="col-md-5">
+									<input type="text" class="form-control" id="modal-new-month-item-content" placeholder="巡检项名称">
+								</div>
+
+								<div class="col-md-5">
+									<select class="form-control" id="modal-new-month-item-date">
+										<option value="1">每月1号</option>
+										<option value="2">每月2号</option>
+										<option value="3">每月3号</option>
+										<option value="4">每月4号</option>
+										<option value="5">每月5号</option>
+										<option value="6">每月6号</option>
+										<option value="7">每月7号</option>
+										<option value="8">每月8号</option>
+										<option value="9">每月9号</option>
+										<option value="10">每月10号</option>
+										<option value="11">每月11号</option>
+										<option value="12">每月12号</option>
+										<option value="13">每月13号</option>
+										<option value="14">每月14号</option>
+										<option value="15">每月15号</option>
+										<option value="16">每月16号</option>
+										<option value="17">每月17号</option>
+										<option value="18">每月18号</option>
+										<option value="19">每月19号</option>
+										<option value="20">每月20号</option>
+										<option value="21">每月21号</option>
+										<option value="22">每月22号</option>
+										<option value="23">每月23号</option>
+										<option value="24">每月24号</option>
+										<option value="25">每月25号</option>
+										<option value="26">每月26号</option>
+										<option value="27">每月27号</option>
+										<option value="28">每月28号</option>
+									</select>
+								</div>
+
+								<div class="col-md-2">
+									<button class="btn btn-success" id="modal-new-month-item-btn">&nbsp;添&nbsp;加&nbsp;</button>
+								</div>
+							</div>
+							<div class="height5"></div>
+							<table class="table table-bordered bg-color-white">
+								<tr>
+									<th>巡检项</th>
+									<th>检查日期</th>
+									<th>操作</th>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+				</div>
+
+				<div class="height20"></div>
+
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="edit-modal-save-check-class">确定</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 删除巡检分类提示 -->
+<div class="modal fade" tabindex="-1" id="remove-check-class-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					添加分类
+				</h4>
+			</div>
+			<input type="hidden" id="modal-remove-check-class-id" value="-1" />
+			<div class="modal-body">
+				删除巡检分类将会删除该分类下所有巡检项，是否继续？
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="modal-confirm-remove-class">继续</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 移除复检提示 -->
+<div class="modal fade" tabindex="-1" id="remove-recheck-confirm">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					系统提示
+				</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" id="modal-remove-recheck-id" value="-1" /> 你确定移除这个复检项吗？
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="modal-confirm-remove-recheck">确定</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 突发设置为日常巡检 -->
+<div class="modal fade" tabindex="-1" id="emergency-to-daily-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					突发处理
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="height20"></div>
+				<input type="hidden" id="modal-emergency-id" value="" />
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10 text-align-l">突发描述</div>
+					<div class="col-md-1"></div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10 text-align-l" id="modal-emergency-desc">突发描述</div>
+					<div class="col-md-1"></div>
+				</div>
+
+				<div class="height20"></div>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10 text-align-l">设为日常巡检的标题</div>
+					<div class="col-md-1"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 text-align-l"></div>
+					<div class="col-md-10 text-align-l">
+						<input type="text" class="form-control" id="modal-daily-title">
+					</div>
+					<div class="col-md-1 text-align-l"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 text-align-l"></div>
+					<div class="col-md-10 text-align-l">
+						<span id="modal-daily-title-tip" class="font12 color-red"></span>
+					</div>
+					<div class="col-md-1 text-align-l"></div>
+				</div>
+
+				<div class="height20"></div>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10 text-align-l">选择分类</div>
+					<div class="col-md-1"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 text-align-l"></div>
+					<div class="col-md-10 text-align-l">
+						<select class="form-control" id="modal-check-class-select"></select>
+					</div>
+					<div class="col-md-1 text-align-l"></div>
+				</div>
+
+
+				<div class="height20"></div>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10 text-align-l">选择类型</div>
+					<div class="col-md-1"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 text-align-l"></div>
+					<div class="col-md-5 text-align-l">
+						<select class="form-control" id="modal-check-type-select">
+							<option value="1">日检</option>
+							<option value="2">周检</option>
+							<option value="3">月检</option>
+						</select>
+					</div>
+
+					<div class="col-md-5 text-align-l">
+						<select class="form-control" id="modal-check-week-select" style="display:none;">
+							<option value="1">每周一</option>
+							<option value="2">每周二</option>
+							<option value="3">每周三</option>
+							<option value="4">每周四</option>
+							<option value="5">每周五</option>
+							<option value="6">每周六</option>
+							<option value="7">每周日</option>
+						</select>
+
+						<select class="form-control" id="modal-check-month-select" style="display:none;">
+							<option value="1">每月1号</option>
+							<option value="2">每月2号</option>
+							<option value="3">每月3号</option>
+							<option value="4">每月4号</option>
+							<option value="5">每月5号</option>
+							<option value="6">每月6号</option>
+							<option value="7">每月7号</option>
+							<option value="8">每月8号</option>
+							<option value="9">每月9号</option>
+							<option value="10">每月10号</option>
+							<option value="11">每月11号</option>
+							<option value="12">每月12号</option>
+							<option value="13">每月13号</option>
+							<option value="14">每月14号</option>
+							<option value="15">每月15号</option>
+							<option value="16">每月16号</option>
+							<option value="17">每月17号</option>
+							<option value="18">每月18号</option>
+							<option value="19">每月19号</option>
+							<option value="20">每月20号</option>
+							<option value="21">每月21号</option>
+							<option value="22">每月22号</option>
+							<option value="23">每月23号</option>
+							<option value="24">每月24号</option>
+							<option value="25">每月25号</option>
+							<option value="26">每月26号</option>
+							<option value="27">每月27号</option>
+							<option value="28">每月28号</option>
+						</select>
+					</div>
+
+					<div class="col-md-1 text-align-l"></div>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="modal-confirm-set-memr-to-daily">确定</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 忽略突发提示 -->
+<div class="modal fade" tabindex="-1" id="ignore-emergency-confirm">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					系统提示
+				</h4>
+			</div>
+			<input type="hidden" id="ignore-emergency-id" value="" />
+			<div class="modal-body">
+				忽略操作将移除该项，是否确认该操作？
+			</div>
+			<div class="modal-footer">
+				<span class="btn btn-default" data-dismiss="modal">取消</span>
+				<span class="btn btn-success" id="modal-confirm-remove-emer">确定</span>
+			</div>
+		</div>
+	</div>
+</div>

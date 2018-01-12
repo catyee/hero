@@ -1,0 +1,153 @@
+@CHARSET "UTF-8";
+
+@import "./common/common";
+
+.header-nav .operation-ticket {
+  border-bottom: 3px solid #03b679;
+}
+
+.header-nav .operation-ticket a {
+  color: #03b679;
+  opacity: 1;
+  font-weight: bold;
+}
+
+/*  操作票  */
+
+.right {
+  width: 1200px;
+  min-height: 800px;
+  background: #f3f3f3;
+  border: 1px solid #c1d7c5;
+  border-radius: 4px;
+  padding: 30px 0 0 75px;
+}
+
+.piao {
+  width: 1050px;
+  border: 1px solid #C2C2C2;
+  margin-bottom: 20px;
+}
+
+.piao-head {
+  width: 72px;
+  height: 72px;
+  border-right: 1px solid #DDDBDB;
+}
+
+.piao-head-left {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.piao-head-center {
+  width: 200px;
+  padding-left: 25px;
+  font-size: 18px;
+  line-height: 71px;
+}
+
+.piao-head-input-1 {
+  width: 257px;
+  height: 38px;
+  border: none;
+  outline: none;
+  background-image: url(//cdn.dianwutong.com/ems/home/img/sou.png);
+  background-repeat: no-repeat;
+  background-position: 195px 7px;
+  padding-left: 12px;
+}
+
+.piao-head-input-2 {
+  width: 200px;
+  height: 38px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-top: 15px;
+  outline: none;
+  padding-left: 12px;
+  margin-left: 35px;
+}
+
+.piao-head-right {
+  width: 75px;
+  height: 38px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background: #5BB75B;
+  margin-left: 17px;
+  margin-top: 15px;
+  font-size: 18px;
+  color: white;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.piao-body-top-1 {
+  width: 262px;
+  height: 64px;
+  border-top: 1px solid #C2C2C2;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+  text-align: center;
+  line-height: 64px;
+  color: #555555;
+}
+
+.piao-body-top-2 {
+  width: 262px;
+  height: 64px;
+  border-top: 1px solid #C2C2C2;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+  text-align: center;
+  line-height: 64px;
+  color: #555555;
+}
+
+.order-item {
+  cursor: pointer;
+}
+
+.order-item:hover {
+  background: #dddbdb;
+}
+
+.piao-foot {
+  width: 152px;
+  height: 37px;
+  line-height: 37px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background: #5bb75b;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 875px;
+}
+
+.poeration-order-con {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.poeration-order-con tr {
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.poeration-order-con td {
+  padding: 20px 10px;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.poeration-order-con tr > td:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+

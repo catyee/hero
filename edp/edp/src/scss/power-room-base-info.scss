@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+@import "./common/common";
+
+/*    基本信息   */
+.t1{width:340px;font-size:18px;color:#000000;margin-left:10px;}
+.t2{width:340px;font-size:18px;color:#000000;margin-left:50px;}
+
+.tr1{height:58px;background:#03b679;color:#ffffff;border:1px solid #90d6b9;text-align:center; filter:alpha(opacity=60);  
+      -moz-opacity:0.6;  
+      -khtml-opacity: 0.6;  
+      opacity: 0.6; }
+.tr2{border:1px solid #90d6b9;height:58px;font-size:16px;}
+
+.td1{padding-left:85px;}
+.td2{vertical-align:top;padding:0px 0px 0px 10px;width:80px;line-height:58px;}
+.td3{vertical-align:center;line-height:32px;}
+.td3-1{vertical-align:center;line-height:32px;}
+
+

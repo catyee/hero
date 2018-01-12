@@ -1,0 +1,145 @@
+@CHARSET "UTF-8";
+@import "./power-room-base-info";
+
+/*  巡检  */
+.header-nav .power-room-list{border-bottom:3px solid #03b679;}
+.header-nav .power-room-list a{color:#03b679;opacity: 1;font-weight:bold;}
+
+.right{width:1200px;min-height:800px;background:#f3f3f3;border:1px solid #c1d7c5;border-radius:4px;padding:26px;}
+
+
+/*  扩展信息   */
+
+
+.t3{width:215px;font-size:18px;text-align: center;background:white;}
+.t3-td1{border:1px solid #dddbdb;height:50px;color:#505050;padding-left:40px;}
+.t3-td2{border:1px solid #dddbdb;height:50px;color:#505050;padding-left:40px;background:#eaeaea;}
+.t3-td1 a,.t3-td2 a{color:#505050;}
+.t3-td1 a:hover,.t3-td2 a:hover{text-decoration: none}
+
+/*    巡检项目   巡检  */
+
+.xiangmu{width:910px;border:1px solid #dddbdb;text-align:center;font-size:18px;margin-left:8px;background:white;border-radius: 4px;;}
+
+.xiangmu-head{background-image: url(//cdn.dianwutong.com/ems/home/img/jianbian_03.png);display: flex;}
+.xiangmu-head-1{width:95px;height:68px;border-right:1px solid #dddbdb;border-bottom:1px solid #dddbdb;cursor:pointer;}
+.xiangmu-head-2{height:68px;width:715px;border-bottom:1px solid #DDDBDB;}
+
+
+.byq{width:910px;height:54px;text-align:left;line-height:54px;padding-left:10px;font-size:16px;}
+.byq-head-1{width:650px;display:inline-block;}
+.byq-head-2{margin-right:30px;color:#03b679;cursor: pointer;}
+.byq-head-3{margin-right:30px;cursor: pointer;}
+.byq-head-4{cursor: pointer;}
+
+.byq-body-1-1{width:160px;height:40px;line-height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;font-size:14px;}
+.byq-body-1-2{width:160px;height:40px;line-height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;border-bottom:1px solid #DDDBDB;font-size:14px;}
+
+.byq-body-2-1{width:424px;height:40px;line-height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;font-size:14px;}
+.byq-body-2-2{width:424px;height:40px;line-height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;border-bottom:1px solid #DDDBDB;font-size:14px;}
+
+
+.byq-body-4-1{width:165px;height:40px;line-height:40px;border-top:1px solid #DDDBDB;font-size:14px;}
+.byq-body-4-2{width:165px;height:40px;line-height:40px;border-top:1px solid #DDDBDB;border-bottom:1px solid #DDDBDB;font-size:14px;}
+
+.fenlei{margin-top:35px;margin-left:750px;width:115px;height:36px;border-radius:4px;
+background:#03b679;text-align:center;line-height:36px;color:#ffffff;cursor: pointer;}
+.baocun{margin-top:35px;margin-left:40px;width:115px;height:48px;border-radius:4px;
+background:#0d9572;text-align:center;line-height:48px;color:#ffffff;cursor: pointer;}
+
+/*    巡检项目   复检   */
+
+.xiangmu-body-1-1{width:216px;height:68px;border-top:1px solid #dddbdb;border-right:1px solid #dddbdb;line-height:68px;}
+.xiangmu-body-1-2{width:216px;height:68px;border-top:1px solid #dddbdb;border-right:1px solid #dddbdb;border-bottom:1px solid #DDDBDB;line-height:68px;}
+
+
+
+.xiangmu-body-2-1{width:530px;height:68px;border-top:1px solid #dddbdb;border-right:1px solid #dddbdb;line-height:68px;}
+.xiangmu-body-2-2{width:530px;height:68px;border-top:1px solid #dddbdb;border-right:1px solid #dddbdb;border-bottom:1px solid #DDDBDB;line-height:68px;}
+
+
+.xiangmu-body-3{width:160px;height:204px;line-height:206px;border-top:1px solid #DDDBDB;border-bottom:1px solid #DDDBDB;}
+.xiangmu-body-3:hover{color:#ffa169;cursor: pointer;}
+
+/*    巡检项目   突发  */
+
+
+
+.xiangmu-head-1.active{background:white;cursor: pointer;border-right:1px solid #dddbdb;border-bottom: none;}
+.tab-title{line-height:70px;display:inline-block;}
+
+.tufa-1-1{width:215px;height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;line-height:40px;}
+.tufa-1-2{width:215px;height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;border-bottom:1px solid #DDDBDB;line-height:40px;}
+
+
+.tufa-2-1{width:530px;height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;line-height:40px;}
+.tufa-2-2{width:530px;height:40px;border-top:1px solid #DDDBDB;border-right:1px solid #DDDBDB;border-bottom:1px solid #DDDBDB;line-height:40px;}
+
+.tufa-3{border-top:1px solid #DDDBDB;border-bottom:1px solid #DDDBDB;width:165px;line-height:24px;}
+.tufa-3-1{padding:5px 10px;font-size:14px;color:#03b679;cursor: pointer;}
+
+
+
+/***********venn************/
+#check-template-modal ul{
+	list-style-type:none;
+}
+
+#modal-check-item-type-nav >div{
+	line-height:32px;
+	cursor:pointer;
+	color:#666;
+}
+
+#modal-check-item-type-nav >div.active{
+	line-height:32px;
+	cursor:pointer;
+	color:#000;
+}
+
+.template-item-preview{
+	min-height:400px;
+	background:#eeeeee;
+	padding:10px;
+	display:none;
+}
+
+#edit-check-class-modal  ul{
+	list-style-type:none;
+}
+
+
+#modal-edit-check-item-type-nav>div{
+	line-height:32px;
+	cursor:pointer;
+	color:#666;
+}
+
+#modal-edit-check-item-type-nav >div.active{
+	line-height:32px;
+	cursor:pointer;
+	color:#03b679;
+}
+
+.edit-item-preview{
+	min-height:600px;
+	background:#eeeeee;
+	padding:10px;
+	display:none;
+}
+
+.bubble{
+	font-size:12px;
+	background:red;
+	border-radius:50%;
+	width:18px;
+	height:18px;
+	color:#fff;
+	margin-top:-60px;
+	margin-left:60px;
+	display:none;
+}
+
+#tab-panel-inspection table{
+	padding: 0px;
+}
